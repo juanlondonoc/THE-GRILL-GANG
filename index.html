@@ -302,16 +302,16 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 /* ---------- MENÚ ---------- */
 .menu-caja{border:4px solid var(--rojo);border-radius:24px;overflow:hidden;background:rgba(255,255,255,.35)}
-.carrusel{
-  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(290px,1fr);
-  gap:0;
-}
-@media (max-width:900px){
-  .carrusel{overflow-x:auto;scroll-snap-type:x mandatory;grid-auto-columns:88%;-webkit-overflow-scrolling:touch}
-  .asado{scroll-snap-align:center}
-}
-.asado{padding:30px 26px;border-right:3px dotted rgba(233,43,34,.45)}
-.asado:last-child{border-right:0}
+.menu-principal{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
+@media (max-width:900px){.menu-principal{grid-template-columns:1fr}}
+.menu-principal .barra-menu{border-radius:0}
+.asado{padding:26px 26px 22px;border-bottom:3px dotted rgba(233,43,34,.45)}
+.asado:last-child{border-bottom:0}
+.asado h3{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.sello{font-size:.72rem;font-style:italic;text-transform:uppercase;background:var(--rojo);color:var(--rosa-claro);padding:4px 10px;border-radius:8px;letter-spacing:.03em}
+.condicion{font-family:var(--item);font-style:italic;font-weight:600;text-transform:uppercase;font-size:.8rem!important;letter-spacing:.04em;opacity:.75;margin-bottom:10px!important}
+.mexicano .tacos{background:var(--rojo);color:var(--rosa-claro);font-family:var(--item);font-weight:700;font-size:1.05rem!important;padding:8px 14px;border-radius:8px}
+.mexicano h4{font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;color:var(--rojo);font-size:1.15rem;margin:16px 0 4px}
 .asado-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:4px}
 .asado h3{
   font-family:var(--item);font-weight:800;font-style:italic;
@@ -542,58 +542,55 @@ footer .legal{font-size:.85rem;opacity:.85}
   <div class="wrap">
     <div class="centro">
       <h2 class="titulo-seccion">El menú, sin vueltas</h2>
-      <p class="intro-seccion">Cuatro asados, cuatro personalidades. Todos incluyen acompañamientos y barra de salsas. Precio por persona.</p>
+      <p class="intro-seccion">Tres asados y una barra mexicana. Todos incluyen barra de salsas. Precio por persona, mínimo 20 platos.</p>
     </div>
 
-    <div class="menu-caja">
-      <div class="barra-menu"><h3>Asados</h3></div>
-      <div class="carrusel">
+    <div class="menu-principal">
+
+      <div class="menu-caja">
+        <div class="barra-menu"><h3>Asados</h3></div>
 
         <article class="asado">
-          <div class="asado-top"><h3>Asado 1</h3><span class="precio">$156<sup>.000</sup> <span class="pp">p/p</span></span></div>
-          <p class="apodo">El de gala</p>
-          <p>Picaña Certified Angus Beef, costilla de cerdo St. Louis cocinada al vacío, pollo parrillado, chicharrón carnudo, chorizo santarrosano y morcilla antioqueña.</p>
-          <p class="incluye">✱ Acompañamientos y barra de salsas</p>
+          <div class="asado-top"><h3>Asado Premium <span class="sello">🔥 Recomendado</span></h3><span class="precio">$88<sup>.000</sup></span></div>
+          <p class="condicion">Precio por persona · Mínimo 20 platos</p>
+          <p>Picaña de res nacional (21 días de maduración) 150 g, bondiola de cerdo ahumada 150 g, ceviche de panceta ahumada, croutones de plátano maduro, leche de tigre de suero costeño 125 g, chorizo santarrosano 75 g, morcilla antioqueña 75 g, papa salada, piña asada, arepa, vegetales parrillados, guacamole, ají criollo y chimichurri.</p>
+          <p class="incluye">✱ Incluye barra de salsas</p>
         </article>
 
         <article class="asado">
-          <div class="asado-top"><h3>Asado 2</h3><span class="precio">$88<sup>.000</sup> <span class="pp">p/p</span></span></div>
-          <p class="apodo">El equilibrado</p>
-          <p>Picaña nacional con 21 días de maduración, bondiola de cerdo ahumada, ceviche de panceta ahumada con leche de tigre de suero costeño, chorizo santarrosano y morcilla antioqueña.</p>
-          <p class="incluye">✱ Acompañamientos y barra de salsas</p>
+          <div class="asado-top"><h3>Asado Clásico</h3><span class="precio">$76<sup>.000</sup></span></div>
+          <p class="condicion">Precio por persona · Mínimo 20 platos</p>
+          <p>Brisket (pecho de res ahumado y cocinado al vacío durante 18 horas) 200 g, bondiola de cerdo ahumada 200 g, chorizo santarrosano 75 g, morcilla antioqueña 75 g, papa salada, vegetales parrillados, guacamole, ají criollo y chimichurri.</p>
+          <p class="incluye">✱ Incluye barra de salsas</p>
         </article>
 
         <article class="asado">
-          <div class="asado-top"><h3>Asado 3</h3><span class="precio">$72<sup>.000</sup> <span class="pp">p/p</span></span></div>
-          <p class="apodo">El ahumado</p>
-          <p>Brisket cocinado al vacío durante 18 horas, bondiola de cerdo ahumada, chorizo santarrosano y morcilla antioqueña.</p>
-          <p class="incluye">✱ Acompañamientos y barra de salsas</p>
+          <div class="asado-top"><h3>Asado Veggie 🌿</h3><span class="precio">$72<sup>.000</sup></span></div>
+          <p class="condicion">Precio por persona · Mínimo 20 platos</p>
+          <p>Brocheta de vegetales, pimentón relleno a la parrillera, queso parrillado, ceviche de hongos, papa, piña asada, arepa, vegetales parrillados, guacamole, ají y chimichurri.</p>
+          <p class="incluye">✱ Incluye barra de salsas</p>
         </article>
-
-        <article class="asado">
-          <div class="asado-top"><h3>Veggie</h3><span class="precio">$72<sup>.000</sup> <span class="pp">p/p</span></span></div>
-          <p class="apodo">Sin carne, con toda la actitud</p>
-          <p>Brocheta de vegetales, pimentón relleno a la parrillera, queso parrillado, ceviche de hongos y piña asada.</p>
-          <p class="incluye">✱ Acompañamientos y barra de salsas</p>
-        </article>
-
       </div>
+
+      <div class="menu-caja">
+        <div class="barra-menu"><h3>Mexicano</h3></div>
+
+        <article class="asado mexicano">
+          <div class="asado-top"><h3>Barra Mexicana</h3><span class="precio">$78<sup>.000</sup></span></div>
+          <p class="condicion">Precio por persona · Mínimo 20 platos</p>
+          <p class="tacos">Tacos x4 · Carnitas de cerdo, tinga de pollo, deshebrada de res</p>
+          <h4>Toppings</h4>
+          <p>Queso Oaxaca, cebolla fresca, cebolla encurtida, pico de gallo, piña, rábanos, cilantro, limón, guacamole, sour cream, salsa roja y salsa verde.</p>
+          <h4>Estación de totopos</h4>
+          <p>Totopos de maíz, fríjol refrito, topping de queso, sour cream, guacamole, jalapeños, pico de gallo, salsa roja, salsa verde, esquites de chicharrón ahumado (con mayonesa de ajo y limón, queso fresco), tostada de camarones y aguacate, y piña parrillada al Tajín.</p>
+        </article>
+      </div>
+
     </div>
 
     <p class="nota-menu">¿No sabes cuál? Escríbenos y te ayudamos a elegir según tu evento y tu presupuesto.</p>
 
     <!-- Acordeones: cerrados por defecto para no alargar la página -->
-    <details class="acordeon">
-      <summary>Barras mexicanas</summary>
-      <div class="acordeon-cuerpo">
-        <ul class="lista-precios">
-          <li><span class="lp-nombre"><b>Mexicano 1</b> — Tacos x4: carnitas de cerdo, tinga de pollo, deshebrada de res</span><span class="lp-linea"></span><span class="lp-precio">$78.000</span></li>
-          <li><span class="lp-nombre"><b>Mexicano 2</b> — Tacos x4 con estación de toppings ampliada</span><span class="lp-linea"></span><span class="lp-precio">$96.000</span></li>
-        </ul>
-        <p style="margin-top:16px;font-size:.95rem"><span class="ast">✱</span> Ambas incluyen estación de toppings con queso Oaxaca, quesadillas y estación de totopos.</p>
-      </div>
-    </details>
-
     <details class="acordeon">
       <summary>Para empezar</summary>
       <div class="acordeon-cuerpo">
