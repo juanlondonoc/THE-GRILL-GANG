@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="es-CO">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Asados a Domicilio Bogotá | The Grill Gang</title>
+<meta name="description" content="El asado a domicilio más top de Bogotá. Carnes maduradas al barril, barra montada y servicio completo. Desde $72.000 por persona. Reserva por WhatsApp.">
+<meta name="keywords" content="asados a domicilio bogota, asado a domicilio, parrilla a domicilio, parrillada a domicilio, catering eventos corporativos bogota, carnes maduradas, barra de asado a domicilio, asado al barril, catering para fincas, asado gourmet">
+<link rel="canonical" href="https://thegrillgang.co/asados-a-domicilio-bogota">
+<meta property="og:title" content="Tú invitas. El gang se encarga del resto.">
+<meta property="og:description" content="Asados a domicilio premium en Bogotá. Carnes maduradas al barril, montaje y servicio completo. Desde 20 personas.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_CO">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,600;0,800;1,600;1,800&family=Jost:ital,wght@0,400;0,500;0,700;1,400&family=Caveat:wght@700&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FoodEstablishment",
+  "name": "The Grill Gang",
+  "description": "Servicio de asados a domicilio premium en Bogotá. Carnes maduradas al barril, barra montada y servicio completo para eventos desde 20 personas.",
+  "servesCuisine": ["Asados", "Parrilla", "BBQ"],
+  "areaServed": { "@type": "City", "name": "Bogotá" },
+  "priceRange": "$$$",
+  "hasMenu": {
+    "@type": "Menu",
+    "hasMenuSection": [{
+      "@type": "MenuSection",
+      "name": "Asados",
+      "hasMenuItem": [
+        { "@type": "MenuItem", "name": "Asado 1", "offers": { "@type": "Offer", "price": "156000", "priceCurrency": "COP" } },
+        { "@type": "MenuItem", "name": "Asado 2", "offers": { "@type": "Offer", "price": "88000", "priceCurrency": "COP" } },
+        { "@type": "MenuItem", "name": "Asado 3", "offers": { "@type": "Offer", "price": "72000", "priceCurrency": "COP" } },
+        { "@type": "MenuItem", "name": "Asado Veggie", "offers": { "@type": "Offer", "price": "72000", "priceCurrency": "COP" } }
+      ]
+    }]
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"¿Cuánto cuesta un asado a domicilio en Bogotá?","acceptedAnswer":{"@type":"Answer","text":"Nuestros asados van desde $72.000 por persona e incluyen carnes, acompañamientos, barra de salsas, montaje y servicio. El valor final depende del menú que elijas y del lugar del evento."}},
+    {"@type":"Question","name":"¿Cuál es el mínimo de personas?","acceptedAnswer":{"@type":"Answer","text":"Desde 20 personas. Para grupos grandes, corporativos o familiares, no hay tope."}},
+    {"@type":"Question","name":"¿Qué incluye el precio por persona?","acceptedAnswer":{"@type":"Answer","text":"Las carnes del asado que elijas, los acompañamientos, la barra de salsas, los platos y cubiertos desechables, el montaje completo, el servicio y la recogida."}},
+    {"@type":"Question","name":"¿A qué zonas de Bogotá van?","acceptedAnswer":{"@type":"Answer","text":"Toda Bogotá y municipios aledaños, fincas incluidas. El transporte se cotiza según la ubicación."}},
+    {"@type":"Question","name":"¿Qué necesito tener en el lugar?","acceptedAnswer":{"@type":"Answer","text":"Solo iluminación y zona de lavado. El barril, la barra, los utensilios y el montaje los llevamos nosotros."}},
+    {"@type":"Question","name":"¿Cómo reservo y cuándo pago?","acceptedAnswer":{"@type":"Answer","text":"Escribes por WhatsApp, armamos la cotización y con el 50% de anticipo queda reservada tu fecha. El saldo se paga el día del evento."}},
+    {"@type":"Question","name":"¿Manejan opciones vegetarianas?","acceptedAnswer":{"@type":"Answer","text":"Sí, tenemos un Asado Veggie completo. Y si hay alergias o restricciones, avísanos al reservar."}},
+    {"@type":"Question","name":"¿Facturan a empresas?","acceptedAnswer":{"@type":"Answer","text":"Sí, trabajamos con empresas y emitimos factura electrónica."}}
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   THE GRILL GANG — Sistema visual derivado del menú de marca
+   ============================================================ */
+:root{
+  --rosa:#F4C4D4;
+  --rosa-claro:#F9DDE6;
+  --rojo:#E92B22;
+  --rojo-oscuro:#C31E17;
+  --carbon:#332A2C;
+  --tinta:#2A2224;
+
+  --display:'Anton',Impact,'Arial Narrow',sans-serif;
+  --item:'Barlow Condensed','Arial Narrow',sans-serif;
+  --texto:'Jost','Century Gothic','Trebuchet MS',sans-serif;
+  --mano:'Caveat','Comic Sans MS',cursive;
+
+  --max:1140px;
+  --radio:26px;
+}
+/* La identidad es fija: el rosa y el rojo no cambian con el tema del visor.
+   Se declaran igual en ambos modos para evitar que el visor altere la marca. */
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --rosa:#F4C4D4; --rosa-claro:#F9DDE6; --rojo:#E92B22; --carbon:#332A2C;
+  }
+}
+:root[data-theme="dark"]{
+  --rosa:#F4C4D4; --rosa-claro:#F9DDE6; --rojo:#E92B22; --carbon:#332A2C;
+}
+
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:20px;-webkit-text-size-adjust:100%}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+
+body{
+  margin:0;
+  background-color:var(--rosa);
+  color:var(--tinta);
+  font-family:var(--texto);
+  font-size:17px;
+  line-height:1.6;
+  overflow-x:hidden;
+}
+
+/* ---------- Tipografía base ---------- */
+h1,h2,h3{margin:0;line-height:.94;text-transform:uppercase}
+p{margin:0 0 1em}
+a{color:inherit}
+
+.display{font-family:var(--display);letter-spacing:.01em;font-weight:400}
+.italica{font-family:var(--item);font-style:italic;font-weight:800;text-transform:uppercase;letter-spacing:.005em}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+section{position:relative}
+.bloque{padding:72px 0}
+@media (max-width:700px){.bloque{padding:52px 0}}
+
+/* ---------- Franja de cuadros (device de marca) ---------- */
+.cuadros{
+  height:16px;width:100%;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='16' viewBox='0 0 44 16'%3E%3Cg fill='%23E92B22'%3E%3Crect x='0' y='0' width='11' height='8'/%3E%3Crect x='22' y='0' width='9' height='8'/%3E%3Crect x='37' y='0' width='7' height='8'/%3E%3Crect x='11' y='8' width='10' height='8'/%3E%3Crect x='31' y='8' width='8' height='8'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat:repeat-x;
+}
+
+/* ---------- Header ---------- */
+.barra-top{
+  position:sticky;top:0;z-index:60;
+  background:var(--rojo);
+  border-bottom:3px solid var(--carbon);
+}
+.barra-top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px}
+/* Slot reservado para el logo oficial. Mantiene el espacio hasta que llegue el SVG. */
+.logo{display:block;flex-shrink:0;width:118px;height:42px;text-decoration:none}
+.logo svg,.logo img{width:100%;height:100%;object-fit:contain}
+.nav-links{display:flex;gap:22px;font-family:var(--item);font-weight:800;font-size:16px;text-transform:uppercase;letter-spacing:.06em}
+.nav-links a{color:var(--rosa-claro);text-decoration:none;padding:4px 0;border-bottom:2px solid transparent}
+.nav-links a:hover,.nav-links a:focus-visible{border-bottom-color:var(--rosa-claro)}
+@media (max-width:820px){.nav-links{display:none}}
+
+/* ---------- Botones ---------- */
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  font-family:var(--item);font-weight:800;font-style:italic;
+  font-size:21px;text-transform:uppercase;letter-spacing:.02em;
+  text-decoration:none;cursor:pointer;border:0;
+  padding:16px 30px;border-radius:999px;
+  transition:transform .12s ease, box-shadow .12s ease;
+}
+.btn-primario{background:var(--rojo);color:var(--rosa-claro);box-shadow:0 5px 0 var(--carbon)}
+.btn-primario:hover,.btn-primario:focus-visible{transform:translateY(-2px);box-shadow:0 7px 0 var(--carbon)}
+.btn-claro{background:var(--rosa-claro);color:var(--rojo);box-shadow:0 5px 0 var(--carbon)}
+.btn-claro:hover,.btn-claro:focus-visible{transform:translateY(-2px);box-shadow:0 7px 0 var(--carbon)}
+.btn-linea{background:transparent;color:var(--carbon);border:3px solid var(--carbon);font-size:17px;padding:12px 24px}
+.btn-linea:hover,.btn-linea:focus-visible{background:var(--carbon);color:var(--rosa-claro)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--carbon);outline-offset:3px}
+
+/* ---------- Hero ---------- */
+.hero{padding:64px 0 24px;text-align:center}
+.kicker{
+  display:inline-block;font-family:var(--item);font-weight:800;font-style:italic;
+  font-size:19px;letter-spacing:.1em;color:var(--rojo);margin-bottom:18px;text-transform:uppercase;
+}
+.hero h1{
+  font-family:var(--display);color:var(--rojo);
+  font-size:clamp(2.5rem,8.4vw,6.2rem);
+  transform:skewX(-6deg);
+  text-wrap:balance;
+  margin-bottom:26px;
+  text-shadow:4px 4px 0 var(--rosa-claro);
+}
+.hero-sub{
+  max-width:640px;margin:0 auto 30px;font-size:clamp(1rem,2.4vw,1.2rem);
+  color:var(--tinta);
+}
+.hero-sub strong{color:var(--rojo);font-weight:700}
+.micro{
+  font-family:var(--item);font-weight:600;text-transform:uppercase;
+  font-size:15px;letter-spacing:.05em;color:var(--carbon);margin-top:16px;
+}
+.micro .ast{color:var(--rojo);font-weight:800;margin:0 7px}
+
+/* Barra de confianza */
+.confianza{
+  display:flex;flex-wrap:wrap;justify-content:center;gap:0;
+  margin:40px auto 0;max-width:900px;
+  background:var(--carbon);border-radius:var(--radio);
+  border:3px solid var(--carbon);overflow:hidden;
+}
+.confianza li{
+  flex:1 1 160px;list-style:none;padding:18px 14px;text-align:center;
+  font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;
+  font-size:16px;color:var(--rosa-claro);letter-spacing:.03em;
+  border-right:2px dashed rgba(249,221,230,.35);
+}
+.confianza li:last-child{border-right:0}
+.confianza ul{margin:0;padding:0}
+@media (max-width:640px){.confianza li{flex-basis:50%;border-bottom:2px dashed rgba(249,221,230,.35)}}
+
+/* ---------- Separador de frase grande ---------- */
+.frasote{
+  background:var(--carbon);
+  color:var(--rosa-claro);
+  text-align:center;padding:84px 0;
+}
+.frasote h2{
+  font-family:var(--display);
+  font-size:clamp(2.1rem,7vw,5rem);
+  color:var(--rosa-claro);
+  transform:skewX(-6deg);
+  text-wrap:balance;max-width:16ch;margin:0 auto .5em;
+}
+.frasote .apoyo{
+  font-family:var(--item);font-weight:600;font-style:italic;
+  font-size:clamp(1rem,2.6vw,1.45rem);
+  text-transform:none;color:var(--rosa);max-width:46ch;margin:0 auto;
+  line-height:1.35;
+}
+
+/* ---------- Tarjeta oscura genérica ---------- */
+.panel{
+  background:var(--carbon);color:var(--rosa-claro);
+  border-radius:var(--radio);padding:44px 38px;
+}
+@media (max-width:640px){.panel{padding:32px 22px}}
+
+/* ---------- Títulos de sección ---------- */
+.titulo-seccion{
+  font-family:var(--display);color:var(--rojo);
+  font-size:clamp(2rem,5.6vw,3.6rem);
+  transform:skewX(-5deg);margin-bottom:10px;text-wrap:balance;
+}
+.titulo-claro{color:var(--rosa-claro)}
+.intro-seccion{max-width:58ch;margin-bottom:34px;font-size:1.05rem}
+.centro{text-align:center}
+.centro .intro-seccion{margin-left:auto;margin-right:auto}
+
+/* Barra roja de encabezado, igual al menú impreso */
+.barra-menu{
+  background:var(--rojo);border-radius:20px 20px 0 0;
+  padding:22px 30px;text-align:center;
+  display:flex;align-items:center;justify-content:center;gap:16px;
+}
+.barra-menu h2,.barra-menu h3{
+  font-family:var(--display);color:var(--rosa-claro);
+  font-size:clamp(1.7rem,4.6vw,2.9rem);
+  transform:skewX(-5deg);
+  -webkit-text-stroke:1px var(--rosa-claro);
+}
+
+/* ---------- Sección problema ---------- */
+.problema .panel p:last-child{margin-bottom:0;font-family:var(--item);font-style:italic;font-weight:800;font-size:1.5rem;color:var(--rosa);text-transform:uppercase}
+
+/* ---------- Beneficios (tabla tachada) ---------- */
+.beneficios-tabla{width:100%;border-collapse:collapse;margin-bottom:34px}
+.beneficios-tabla th{
+  font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;
+  font-size:1.15rem;text-align:left;padding:0 18px 14px;color:var(--rojo);
+  border-bottom:3px solid var(--carbon);
+}
+.beneficios-tabla th:last-child{color:var(--carbon)}
+.beneficios-tabla td{
+  padding:14px 18px;border-bottom:2px dotted rgba(51,42,44,.4);vertical-align:top;font-size:1rem;
+}
+.beneficios-tabla td:first-child{text-decoration:line-through;text-decoration-color:var(--rojo);text-decoration-thickness:2px;opacity:.62;width:46%}
+.beneficios-tabla td:last-child{font-weight:500}
+@media (max-width:700px){
+  .beneficios-tabla,.beneficios-tabla tbody,.beneficios-tabla tr,.beneficios-tabla td{display:block;width:100%}
+  .beneficios-tabla thead{display:none}
+  .beneficios-tabla tr{background:rgba(255,255,255,.4);border:3px solid var(--carbon);border-radius:18px;padding:14px 16px;margin-bottom:14px}
+  .beneficios-tabla td{border:0;padding:4px 0}
+  .beneficios-tabla td:first-child{width:auto;font-size:.95rem}
+  .beneficios-tabla td:last-child::before{content:"✱ ";color:var(--rojo);font-weight:800}
+}
+.cierre-beneficio{
+  font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;
+  font-size:clamp(1.2rem,3.4vw,1.9rem);color:var(--rojo);text-align:center;
+  max-width:24ch;margin:0 auto 30px;line-height:1.1;
+}
+
+/* ---------- Grid de tarjetas "qué incluye" ---------- */
+.grid-incluye{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px}
+.tarjeta-incluye{
+  background:var(--carbon);color:var(--rosa-claro);
+  border-radius:20px;padding:26px 24px;
+}
+.tarjeta-incluye h3{
+  font-family:var(--item);font-weight:800;font-style:italic;
+  font-size:1.3rem;color:var(--rosa);margin-bottom:10px;line-height:1.1;
+}
+.tarjeta-incluye p{margin:0;font-size:.97rem;line-height:1.5;color:var(--rosa-claro)}
+
+/* ---------- Carnes ---------- */
+.carnes-datos{
+  display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;list-style:none;padding:0;
+}
+.carnes-datos li{
+  font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;
+  font-size:.95rem;letter-spacing:.03em;
+  background:var(--rojo);color:var(--rosa-claro);padding:8px 16px;border-radius:999px;
+}
+.remate{font-family:var(--mano);font-size:clamp(1.5rem,4vw,2.2rem);color:var(--rojo);text-transform:none;line-height:1.1;margin-top:8px}
+
+/* ---------- MENÚ ---------- */
+.menu-caja{border:4px solid var(--rojo);border-radius:24px;overflow:hidden;background:rgba(255,255,255,.35)}
+.carrusel{
+  display:grid;grid-auto-flow:column;grid-auto-columns:minmax(290px,1fr);
+  gap:0;
+}
+@media (max-width:900px){
+  .carrusel{overflow-x:auto;scroll-snap-type:x mandatory;grid-auto-columns:88%;-webkit-overflow-scrolling:touch}
+  .asado{scroll-snap-align:center}
+}
+.asado{padding:30px 26px;border-right:3px dotted rgba(233,43,34,.45)}
+.asado:last-child{border-right:0}
+.asado-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;margin-bottom:4px}
+.asado h3{
+  font-family:var(--item);font-weight:800;font-style:italic;
+  font-size:1.75rem;color:var(--carbon);line-height:1;
+}
+.precio{
+  font-family:var(--item);font-weight:800;font-style:italic;
+  font-size:1.75rem;color:var(--rojo);white-space:nowrap;line-height:1;
+}
+.precio sup{font-size:.55em;top:-.55em;position:relative}
+.apodo{font-family:var(--mano);font-size:1.4rem;color:var(--rojo);margin-bottom:12px;line-height:1}
+.asado p{font-size:.95rem;line-height:1.5;margin-bottom:12px}
+.asado .incluye{font-size:.85rem;font-style:italic;color:var(--carbon);opacity:.8;margin:0}
+.pp{font-size:.62em;font-style:normal;letter-spacing:.04em}
+
+.nota-menu{text-align:center;font-family:var(--item);font-weight:600;font-style:italic;font-size:1.1rem;margin:26px auto 30px;max-width:46ch}
+
+/* Acordeones del menú */
+.acordeon{
+  border:3px solid var(--carbon);border-radius:18px;margin-bottom:12px;
+  background:rgba(255,255,255,.4);overflow:hidden;
+}
+.acordeon summary{
+  cursor:pointer;list-style:none;padding:16px 22px;
+  font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;
+  font-size:1.2rem;color:var(--carbon);
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.acordeon summary::-webkit-details-marker{display:none}
+.acordeon summary::after{content:"+";font-family:var(--display);color:var(--rojo);font-size:1.6rem;line-height:1}
+.acordeon[open] summary::after{content:"–"}
+.acordeon[open] summary{background:var(--rojo);color:var(--rosa-claro)}
+.acordeon[open] summary::after{color:var(--rosa-claro)}
+.acordeon-cuerpo{padding:20px 22px}
+
+/* Lista con línea de puntos guía — device central del menú */
+.lista-precios{list-style:none;margin:0;padding:0}
+.lista-precios li{
+  display:flex;align-items:baseline;gap:6px;padding:9px 0;
+  border-bottom:2px dotted rgba(51,42,44,.35);
+}
+.lista-precios li:last-child{border-bottom:0}
+.lp-nombre{font-family:var(--item);font-weight:600;font-size:1.05rem;flex:0 1 auto}
+.lp-nombre b{font-weight:800;font-style:italic}
+.lp-linea{flex:1 1 auto;min-width:18px;border-bottom:2px dotted rgba(51,42,44,.55);transform:translateY(-4px)}
+.lp-precio{font-family:var(--item);font-weight:800;font-style:italic;color:var(--rojo);white-space:nowrap;font-size:1.1rem}
+.ast{color:var(--rojo);font-weight:800}
+.acciones-menu{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-top:30px}
+
+/* ---------- Eventos ---------- */
+.grid-eventos{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px}
+.evento{
+  border:4px solid var(--carbon);border-radius:20px;padding:28px 24px;
+  background:rgba(255,255,255,.4);
+}
+.evento h3{font-family:var(--item);font-weight:800;font-style:italic;font-size:1.45rem;color:var(--rojo);margin-bottom:10px}
+.evento p{margin:0;font-size:1rem}
+
+/* ---------- Pasos ---------- */
+.pasos{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;counter-reset:paso}
+.paso{position:relative;padding-top:12px}
+.paso .num{
+  font-family:var(--display);font-size:4.4rem;color:var(--rojo);line-height:.8;
+  display:block;margin-bottom:6px;transform:skewX(-6deg);
+}
+.paso h3{font-family:var(--item);font-weight:800;font-style:italic;font-size:1.35rem;color:var(--rosa-claro);margin-bottom:8px}
+.paso p{font-size:.98rem;margin:0;color:var(--rosa)}
+
+/* ---------- Por qué nosotros ---------- */
+.razones{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:26px}
+.razon h3{font-family:var(--item);font-weight:800;font-style:italic;font-size:1.3rem;color:var(--rojo);margin-bottom:8px}
+.razon p{margin:0;font-size:1rem}
+
+/* ---------- Prueba social ---------- */
+.testimonios{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:18px;margin-bottom:40px}
+.testimonio{
+  background:var(--carbon);color:var(--rosa-claro);border-radius:20px;padding:26px 24px;
+}
+.testimonio blockquote{margin:0 0 14px;font-size:1.02rem;font-style:italic;line-height:1.5;min-height:80px}
+.testimonio cite{font-family:var(--item);font-weight:800;font-style:normal;text-transform:uppercase;font-size:.92rem;color:var(--rosa);letter-spacing:.03em}
+.galeria{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px}
+.foto-ph{
+  aspect-ratio:4/3;border:4px dashed var(--rojo);border-radius:16px;
+  display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;
+  font-family:var(--item);font-weight:600;text-transform:uppercase;font-size:.88rem;
+  color:var(--rojo);letter-spacing:.04em;background:rgba(255,255,255,.3);
+}
+
+/* ---------- Antes de reservar ---------- */
+.grid-condiciones{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:18px;margin-bottom:26px}
+.condicion{border-left:5px solid var(--rojo);padding:4px 0 4px 18px}
+.condicion h3{font-family:var(--item);font-weight:800;font-style:italic;font-size:1.18rem;color:var(--carbon);margin-bottom:6px}
+.condicion p{margin:0;font-size:.97rem}
+.tyc-lista{padding-left:20px;margin:0}
+.tyc-lista li{margin-bottom:12px;font-size:.95rem;line-height:1.5}
+.tyc-lista li::marker{color:var(--rojo)}
+
+/* ---------- FAQ ---------- */
+.faq .acordeon summary{font-style:normal;text-transform:none;font-family:var(--texto);font-weight:700;font-size:1.06rem}
+.faq .acordeon-cuerpo p{margin:0;font-size:1rem}
+
+/* ---------- Cierre ---------- */
+.cierre{text-align:center}
+.cierre .panel{max-width:760px;margin:0 auto}
+.cierre h2{font-family:var(--display);color:var(--rosa-claro);font-size:clamp(1.9rem,5.4vw,3.4rem);transform:skewX(-5deg);margin-bottom:18px;text-wrap:balance}
+.cierre p{color:var(--rosa);max-width:48ch;margin:0 auto 28px}
+
+/* ---------- Footer ---------- */
+footer{background:var(--rojo);color:var(--rosa-claro);padding:44px 0 34px;text-align:center}
+footer .tagline{font-family:var(--mano);font-size:1.5rem;margin-bottom:18px}
+footer a{color:var(--rosa-claro)}
+footer .links{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;font-family:var(--item);font-weight:600;text-transform:uppercase;letter-spacing:.05em;font-size:.95rem;margin-bottom:14px}
+footer .legal{font-size:.85rem;opacity:.85}
+
+/* ---------- Botón flotante WhatsApp ---------- */
+.flotante{
+  position:fixed;right:16px;bottom:16px;z-index:80;
+  background:var(--rojo);color:var(--rosa-claro);
+  border-radius:999px;padding:14px 22px;
+  font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;
+  font-size:1.05rem;text-decoration:none;
+  box-shadow:0 5px 0 var(--carbon),0 10px 24px rgba(42,34,36,.3);
+  display:flex;align-items:center;gap:9px;
+}
+@media (min-width:900px){.flotante{display:none}}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.salta{position:absolute;left:-9999px;background:var(--carbon);color:var(--rosa-claro);padding:12px 18px;z-index:99}
+.salta:focus{left:12px;top:12px}
+</style>
+</head>
+<body>
+
+<a href="#contenido" class="salta">Saltar al contenido</a>
+
+<!-- ============ HEADER ============ -->
+<header class="barra-top">
+  <div class="wrap">
+    <!-- SLOT DE LOGO: insertar aquí el SVG oficial de The Grill Gang -->
+    <a class="logo" href="#top" aria-label="The Grill Gang, inicio"></a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#menu">Menú</a>
+      <a href="#carnes">Las carnes</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#faq">Preguntas</a>
+    </nav>
+    <a class="btn btn-claro" style="font-size:16px;padding:11px 20px"
+       href="https://wa.me/573000000000?text=Hey!%20Quiero%20cotizar%20un%20asado%20con%20The%20Grill%20Gang.%20Mi%20evento%20es%20el%20%5Bfecha%5D%20en%20%5Bzona%5D%20para%20%5Bn%C3%BAmero%5D%20personas.&utm_source=landing&utm_medium=cta&utm_campaign=header">Reservar</a>
+  </div>
+</header>
+
+<div class="cuadros" role="presentation"></div>
+
+<main id="contenido">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <p class="kicker">Hey, ¿qué más? 👀</p>
+
+    <h1 class="display">¿Tienes un evento y te tocó ser el del asado otra vez?</h1>
+
+    <p class="hero-sub">Relájate. <strong>The Grill Gang</strong> monta la mejor <strong>barra de asado a domicilio de Bogotá</strong> en tu casa, tu finca o donde tú digas. Carnes maduradas premium al barril, servicio completo y cero estrés para ti.</p>
+
+    <a class="btn btn-primario" href="https://wa.me/573000000000?text=Hey!%20Quiero%20cotizar%20un%20asado%20con%20The%20Grill%20Gang.%20Mi%20evento%20es%20el%20%5Bfecha%5D%20en%20%5Bzona%5D%20para%20%5Bn%C3%BAmero%5D%20personas.&utm_source=landing&utm_medium=cta&utm_campaign=hero">🔥 Reservar mi asado</a>
+
+    <p class="micro">Desde $72.000 por persona <span class="ast">✱</span> Eventos desde 20 personas <span class="ast">✱</span> Te respondemos en minutos</p>
+
+    <div class="confianza">
+      <ul style="display:contents">
+        <li>🥩 Carnes maduradas</li>
+        <li>🔥 Al barril</li>
+        <li>🎪 Montaje incluido</li>
+        <li>📍 Bogotá y alrededores</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="cuadros" role="presentation" style="margin-top:56px"></div>
+
+<!-- ============ 2. FRASE GRANDE ============ -->
+<section class="frasote">
+  <div class="wrap">
+    <h2>El asado a domicilio más top de la ciudad.</h2>
+    <p class="apoyo">Y no lo decimos nosotros. Lo dice el que ya no volvió a cocinar en sus propios eventos.</p>
+  </div>
+</section>
+
+<!-- ============ 3. EL PROBLEMA ============ -->
+<section class="bloque problema">
+  <div class="wrap">
+    <h2 class="titulo-seccion" style="max-width:20ch">Organizar un asado para 30 personas no es un plan, parce. Es un trabajo.</h2>
+    <div class="panel" style="margin-top:28px">
+      <p>Cotizar la carne. Cargar el mercado. Prender el fuego dos horas antes. Servir de a poquitos mientras todos ya comieron. Y al final, lavar.</p>
+      <p>Al que organiza siempre le toca la peor parte: no disfrutar su propio asado.</p>
+      <p>Ahí es donde entra el gang.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. BENEFICIOS ============ -->
+<section class="bloque" id="beneficios">
+  <div class="wrap">
+    <h2 class="titulo-seccion">Tú no tienes que preocuparte por nada. Literal, por nada.</h2>
+    <p class="intro-seccion">No es una forma de hablar. Es la lista real de todo lo que dejas de hacer cuando nos reservas:</p>
+
+    <table class="beneficios-tabla">
+      <thead><tr><th scope="col">Lo que ya no haces</th><th scope="col">Lo que hacemos nosotros</th></tr></thead>
+      <tbody>
+        <tr><td>Buscar dónde comprar buena carne</td><td>Llegamos con cortes madurados seleccionados</td></tr>
+        <tr><td>Cargar mercado y hielo</td><td>Llevamos absolutamente todo</td></tr>
+        <tr><td>Prender el fuego y cuidarlo</td><td>El barril lo manejamos nosotros</td></tr>
+        <tr><td>Cocinar mientras todos parchan</td><td>Cocinamos en vivo, tú estás con tu gente</td></tr>
+        <tr><td>Servir plato por plato</td><td>Servimos a todos tus invitados</td></tr>
+        <tr><td>Prestar tu parrilla, mesas, platos</td><td>Montamos la barra completa</td></tr>
+        <tr><td>Comprar platos y cubiertos</td><td>Van incluidos en el servicio</td></tr>
+        <tr><td>Quedarte lavando a la 1 a.m.</td><td>Recogemos y nos vamos con todo</td></tr>
+      </tbody>
+    </table>
+
+    <p class="cierre-beneficio">Tu única tarea es decidir a quién invitas. En serio, esa es toda tu chamba.</p>
+
+    <p class="centro" style="text-align:center">
+      <a class="btn btn-primario" href="https://wa.me/573000000000?text=Hey!%20Quiero%20que%20The%20Grill%20Gang%20se%20encargue%20de%20mi%20evento.%20Es%20el%20%5Bfecha%5D%20en%20%5Bzona%5D%20para%20%5Bn%C3%BAmero%5D%20personas.&utm_source=landing&utm_medium=cta&utm_campaign=beneficios">🔥 Quiero que se encarguen de todo</a>
+    </p>
+  </div>
+</section>
+
+<!-- ============ 5. FRASE GRANDE ============ -->
+<section class="frasote">
+  <div class="wrap">
+    <h2>Nosotros montamos. Nosotros cocinamos. Nosotros recogemos.</h2>
+    <p class="apoyo">Tú comes, brindas y parchas. Ese es el trato.</p>
+  </div>
+</section>
+
+<!-- ============ 6. QUÉ INCLUYE ============ -->
+<section class="bloque" id="incluye">
+  <div class="wrap">
+    <h2 class="titulo-seccion">Pillen pues todo lo que va incluido</h2>
+    <p class="intro-seccion">No llevamos una parrillita y ya. Llevamos la experiencia completa, montada como debe ser.</p>
+
+    <div class="grid-incluye">
+      <article class="tarjeta-incluye"><h3>🥩 Carnes maduradas premium</h3><p>Cortes seleccionados con maduración controlada. La diferencia se siente desde el primer mordisco.</p></article>
+      <article class="tarjeta-incluye"><h3>🔥 Cocción al barril</h3><p>Fuego lento, humo real, sellado perfecto. La técnica que hace que sepa distinto de verdad.</p></article>
+      <article class="tarjeta-incluye"><h3>🎪 La barra montada</h3><p>Un display que se ve tan bien como sabe. Tu evento sube de nivel apenas lo ven.</p></article>
+      <article class="tarjeta-incluye"><h3>🥗 Acompañamientos</h3><p>Papa salada, piña asada, arepa, vegetales parrillados y guacamole en todos nuestros asados.</p></article>
+      <article class="tarjeta-incluye"><h3>🌶️ Barra de salsas</h3><p>Ají criollo, chimichurri y nuestra selección propia. Cada invitado arma su combinación.</p></article>
+      <article class="tarjeta-incluye"><h3>🧹 Servicio y recogida</h3><p>Llegamos, montamos, servimos y nos vamos con todo. Tu casa queda como estaba.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. LAS CARNES ============ -->
+<section class="bloque" id="carnes">
+  <div class="wrap">
+    <div class="panel">
+      <h2 class="titulo-seccion titulo-claro">Carnes maduradas: por eso sabe como sabe</h2>
+      <p style="max-width:62ch;margin-top:22px">Acá no hay truco raro ni salsa que tape nada. Trabajamos con <strong>cortes premium madurados</strong> — picaña Certified Angus Beef, picaña nacional con 21 días de maduración, brisket ahumado 18 horas al vacío — y eso concentra el sabor a un punto que la carne fresca simplemente no alcanza.</p>
+      <p style="max-width:62ch">Después van al barril: cocción lenta, humo de verdad y el punto exacto para cada corte.</p>
+      <p class="remate">Ese es todo el secreto.</p>
+      <ul class="carnes-datos">
+        <li>Certified Angus Beef</li>
+        <li>Maduración de 21 días</li>
+        <li>Brisket de 18 horas</li>
+        <li>Punto a tu gusto</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. EL MENÚ ============ -->
+<section class="bloque" id="menu">
+  <div class="wrap">
+    <div class="centro">
+      <h2 class="titulo-seccion">El menú, sin vueltas</h2>
+      <p class="intro-seccion">Cuatro asados, cuatro personalidades. Todos incluyen acompañamientos y barra de salsas. Precio por persona.</p>
+    </div>
+
+    <div class="menu-caja">
+      <div class="barra-menu"><h3>Asados</h3></div>
+      <div class="carrusel">
+
+        <article class="asado">
+          <div class="asado-top"><h3>Asado 1</h3><span class="precio">$156<sup>.000</sup> <span class="pp">p/p</span></span></div>
+          <p class="apodo">El de gala</p>
+          <p>Picaña Certified Angus Beef, costilla de cerdo St. Louis cocinada al vacío, pollo parrillado, chicharrón carnudo, chorizo santarrosano y morcilla antioqueña.</p>
+          <p class="incluye">✱ Acompañamientos y barra de salsas</p>
+        </article>
+
+        <article class="asado">
+          <div class="asado-top"><h3>Asado 2</h3><span class="precio">$88<sup>.000</sup> <span class="pp">p/p</span></span></div>
+          <p class="apodo">El equilibrado</p>
+          <p>Picaña nacional con 21 días de maduración, bondiola de cerdo ahumada, ceviche de panceta ahumada con leche de tigre de suero costeño, chorizo santarrosano y morcilla antioqueña.</p>
+          <p class="incluye">✱ Acompañamientos y barra de salsas</p>
+        </article>
+
+        <article class="asado">
+          <div class="asado-top"><h3>Asado 3</h3><span class="precio">$72<sup>.000</sup> <span class="pp">p/p</span></span></div>
+          <p class="apodo">El ahumado</p>
+          <p>Brisket cocinado al vacío durante 18 horas, bondiola de cerdo ahumada, chorizo santarrosano y morcilla antioqueña.</p>
+          <p class="incluye">✱ Acompañamientos y barra de salsas</p>
+        </article>
+
+        <article class="asado">
+          <div class="asado-top"><h3>Veggie</h3><span class="precio">$72<sup>.000</sup> <span class="pp">p/p</span></span></div>
+          <p class="apodo">Sin carne, con toda la actitud</p>
+          <p>Brocheta de vegetales, pimentón relleno a la parrillera, queso parrillado, ceviche de hongos y piña asada.</p>
+          <p class="incluye">✱ Acompañamientos y barra de salsas</p>
+        </article>
+
+      </div>
+    </div>
+
+    <p class="nota-menu">¿No sabes cuál? Escríbenos y te ayudamos a elegir según tu evento y tu presupuesto.</p>
+
+    <!-- Acordeones: cerrados por defecto para no alargar la página -->
+    <details class="acordeon">
+      <summary>Barras mexicanas</summary>
+      <div class="acordeon-cuerpo">
+        <ul class="lista-precios">
+          <li><span class="lp-nombre"><b>Mexicano 1</b> — Tacos x4: carnitas de cerdo, tinga de pollo, deshebrada de res</span><span class="lp-linea"></span><span class="lp-precio">$78.000</span></li>
+          <li><span class="lp-nombre"><b>Mexicano 2</b> — Tacos x4 con estación de toppings ampliada</span><span class="lp-linea"></span><span class="lp-precio">$96.000</span></li>
+        </ul>
+        <p style="margin-top:16px;font-size:.95rem"><span class="ast">✱</span> Ambas incluyen estación de toppings con queso Oaxaca, quesadillas y estación de totopos.</p>
+      </div>
+    </details>
+
+    <details class="acordeon">
+      <summary>Para empezar</summary>
+      <div class="acordeon-cuerpo">
+        <ul class="lista-precios">
+          <li><span class="lp-nombre"><b>Canasta de patacón x3</b> — guacamole, hogao, queso, chicharrón</span><span class="lp-linea"></span><span class="lp-precio">$24.000</span></li>
+          <li><span class="lp-nombre"><b>Arancinis de morcilla antioqueña</b> x3</span><span class="lp-linea"></span><span class="lp-precio">$11.000</span></li>
+          <li><span class="lp-nombre"><b>Frituras colombianas</b> — mini empanada, arepa de huevo, palito de queso x3</span><span class="lp-linea"></span><span class="lp-precio">$9.000</span></li>
+          <li><span class="lp-nombre"><b>Ceviche de camarón</b> — salsa caribeña, vegetales, chips de papa</span><span class="lp-linea"></span><span class="lp-precio">$28.000</span></li>
+          <li><span class="lp-nombre"><b>Arepa de choclo y queso</b> — chicharrón glaseado en miel de pimienta y limón</span><span class="lp-linea"></span><span class="lp-precio">$26.000</span></li>
+          <li><span class="lp-nombre"><b>Pulpo a la parrilla</b> — papas rotas, hogao, suero, aceite de cilantro (8 personas)</span><span class="lp-linea"></span><span class="lp-precio">$420.000</span></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acordeon">
+      <summary>Adicionales</summary>
+      <div class="acordeon-cuerpo">
+        <ul class="lista-precios">
+          <li><span class="lp-nombre"><b>Costillas de cerdo St. Louis</b> 2.500 g — 10 porciones aprox.</span><span class="lp-linea"></span><span class="lp-precio">$380.000</span></li>
+          <li><span class="lp-nombre"><b>Rib eye</b> 2.000 g — 13 porciones aprox.</span><span class="lp-linea"></span><span class="lp-precio">$330.000</span></li>
+          <li><span class="lp-nombre"><b>Chunchullo</b> 1.500 g — 10 porciones aprox.</span><span class="lp-linea"></span><span class="lp-precio">$180.000</span></li>
+          <li><span class="lp-nombre"><b>Chicharrón carnudo</b> 2.000 g — 10 porciones aprox.</span><span class="lp-linea"></span><span class="lp-precio">$180.000</span></li>
+          <li><span class="lp-nombre"><b>Pollo parrillado</b> — 10 porciones aprox.</span><span class="lp-linea"></span><span class="lp-precio">$140.000</span></li>
+          <li><span class="lp-nombre"><b>Ensalada fresca</b> x10 porciones</span><span class="lp-linea"></span><span class="lp-precio">$120.000</span></li>
+          <li><span class="lp-nombre"><b>Salmón steak</b> 350 g</span><span class="lp-linea"></span><span class="lp-precio">$52.000</span></li>
+          <li><span class="lp-nombre"><b>Mazorca asada</b> / <b>plátano maduro</b> / <b>arepa de choclo</b> und.</span><span class="lp-linea"></span><span class="lp-precio">$9.000</span></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acordeon">
+      <summary>Bebidas</summary>
+      <div class="acordeon-cuerpo">
+        <ul class="lista-precios">
+          <li><span class="lp-nombre"><b>Gaseosas</b> — all you can drink</span><span class="lp-linea"></span><span class="lp-precio">$10.000</span></li>
+          <li><span class="lp-nombre"><b>Estación Corona</b> — 3 unidades por comensal</span><span class="lp-linea"></span><span class="lp-precio">$30.000</span></li>
+          <li><span class="lp-nombre"><b>Refajo dispensador</b> — 8 litros, 25 vasos aprox.</span><span class="lp-linea"></span><span class="lp-precio">$150.000</span></li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="acordeon">
+      <summary>Postres</summary>
+      <div class="acordeon-cuerpo">
+        <ul class="lista-precios">
+          <li><span class="lp-nombre"><b>Cheesecake de frutos rojos</b></span><span class="lp-linea"></span><span class="lp-precio">$16.000</span></li>
+          <li><span class="lp-nombre"><b>Flan de caramelo de Supercoco</b></span><span class="lp-linea"></span><span class="lp-precio">$16.000</span></li>
+          <li><span class="lp-nombre"><b>Brownies de Milo</b></span><span class="lp-linea"></span><span class="lp-precio">$9.000</span></li>
+        </ul>
+      </div>
+    </details>
+
+    <div class="acciones-menu">
+      <!-- PENDIENTE: enlazar el PDF del menú completo -->
+      <a class="btn btn-linea" href="#" aria-label="Descargar menú completo en PDF">📄 Descargar menú completo</a>
+      <a class="btn btn-primario" href="https://wa.me/573000000000?text=Hey!%20Me%20interesa%20uno%20de%20los%20asados%20de%20The%20Grill%20Gang.%20%C2%BFMe%20cotizan%20para%20%5Bn%C3%BAmero%5D%20personas%3F&utm_source=landing&utm_medium=cta&utm_campaign=menu">🔥 Cotizar mi asado</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. PARA QUÉ EVENTOS ============ -->
+<section class="bloque" id="eventos">
+  <div class="wrap">
+    <h2 class="titulo-seccion">Un asado para cada plan</h2>
+    <div class="grid-eventos" style="margin-top:28px">
+      <article class="evento">
+        <h3>Familia y amigos</h3>
+        <p>Cumpleaños, reencuentros, plan de finca o un domingo que merecía algo mejor. Desde 20 personas.</p>
+      </article>
+      <article class="evento">
+        <h3>Eventos corporativos</h3>
+        <p>Cierres de año, integraciones de equipo y activaciones de marca. Grupos grandes, logística resuelta y facturación en regla.</p>
+      </article>
+      <article class="evento">
+        <h3>Fincas y casas campestres</h3>
+        <p>Salimos de Bogotá sin problema. No necesitas cocina ni parrilla: llevamos todo.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 10. CÓMO FUNCIONA ============ -->
+<section class="frasote" id="como-funciona" style="padding:72px 0">
+  <div class="wrap">
+    <h2 class="titulo-seccion titulo-claro" style="text-align:center;max-width:22ch;margin:0 auto 42px">Reservar es más fácil que prender el carbón</h2>
+    <div class="pasos">
+      <div class="paso"><span class="num">1</span><h3>Escríbenos</h3><p>Cuéntanos cuándo, dónde y cuántos son. Te armamos la propuesta a la medida.</p></div>
+      <div class="paso"><span class="num">2</span><h3>Confirmas con el 50%</h3><p>Definimos menú y hora. Con el anticipo queda blindada tu fecha; el saldo lo pagas el día del evento.</p></div>
+      <div class="paso"><span class="num">3</span><h3>Llega el gang</h3><p>Montamos con tiempo, cocinamos en vivo y servimos. Tú recibes invitados.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 11. POR QUÉ NOSOTROS ============ -->
+<section class="bloque">
+  <div class="wrap">
+    <h2 class="titulo-seccion">¿Y por qué nosotros?</h2>
+    <div class="razones" style="margin-top:30px">
+      <div class="razon"><h3>No improvisamos</h3><p>Cada evento tiene su plan de montaje, sus tiempos y su equipo asignado. Lo fresco es el trato, no el servicio.</p></div>
+      <div class="razon"><h3>El show es parte del plato</h3><p>Cocinar frente a tus invitados no es un detalle, es parte de la experiencia.</p></div>
+      <div class="razon"><h3>No somos un domicilio, somos un servicio</h3><p>Llegamos con anticipación, montamos completo y respondemos hasta el final.</p></div>
+      <div class="razon"><h3>Con la carne no jugamos</h3><p>Preferimos decir que no a un evento antes que bajar el estándar. Punto.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 12. PRUEBA SOCIAL ============ -->
+<section class="bloque" id="montaje">
+  <div class="wrap">
+    <h2 class="titulo-seccion">Los que ya invitaron al gang</h2>
+    <!-- PENDIENTE: reemplazar por testimonios reales -->
+    <div class="testimonios" style="margin-top:28px">
+      <figure class="testimonio"><blockquote>[Testimonio real pendiente]</blockquote><cite>Nombre ✱ Cumpleaños en finca ✱ 40 invitados</cite></figure>
+      <figure class="testimonio"><blockquote>[Testimonio real pendiente]</blockquote><cite>Nombre ✱ Cierre de año corporativo ✱ 80 invitados</cite></figure>
+      <figure class="testimonio"><blockquote>[Testimonio real pendiente]</blockquote><cite>Nombre ✱ Reunión familiar ✱ 25 invitados</cite></figure>
+    </div>
+
+    <h3 class="titulo-seccion" style="font-size:clamp(1.4rem,3.6vw,2.2rem);margin-bottom:18px">Échale un ojo al montaje 👇</h3>
+    <!-- PENDIENTE: 6 fotos reales del montaje de la barra -->
+    <div class="galeria">
+      <div class="foto-ph">Foto 1 — Barra montada completa</div>
+      <div class="foto-ph">Foto 2 — Detalle de carnes al barril</div>
+      <div class="foto-ph">Foto 3 — Equipo sirviendo en vivo</div>
+      <div class="foto-ph">Foto 4 — Barra de salsas</div>
+      <div class="foto-ph">Foto 5 — Evento corporativo</div>
+      <div class="foto-ph">Foto 6 — Montaje en finca</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 13. ANTES DE RESERVAR ============ -->
+<section class="bloque" id="antes-de-reservar">
+  <div class="wrap">
+    <h2 class="titulo-seccion">Lo que debes saber antes de reservar</h2>
+    <p class="intro-seccion">Sin letra menuda ni sorpresas. Esto es lo que necesitamos de tu lado:</p>
+
+    <div class="grid-condiciones">
+      <div class="condicion"><h3>👥 Desde 20 personas</h3><p>Es nuestro mínimo para que la barra funcione como debe funcionar.</p></div>
+      <div class="condicion"><h3>💳 50% para reservar</h3><p>Con el anticipo tu fecha queda blindada. El saldo lo pagas el día del evento.</p></div>
+      <div class="condicion"><h3>💡 Luz y zona de lavado</h3><p>Es lo único que necesitamos del espacio. Nosotros llevamos todo lo demás.</p></div>
+      <div class="condicion"><h3>🍽️ Vajilla incluida</h3><p>Platos, cubiertos y servilletas desechables van incluidos. ¿Prefieres cerámica? Te la conseguimos con un costo adicional.</p></div>
+      <div class="condicion"><h3>🚐 Transporte según ubicación</h3><p>El domicilio varía según qué tan lejos sea. Te lo decimos claro en la cotización, sin sorpresas.</p></div>
+      <div class="condicion"><h3>🥜 Cuéntanos de alergias</h3><p>Si alguien tiene restricciones alimentarias, avísanos al reservar y lo resolvemos.</p></div>
+    </div>
+
+    <details class="acordeon">
+      <summary>Ver términos y condiciones completos</summary>
+      <div class="acordeon-cuerpo">
+        <ol class="tyc-lista">
+          <li>Servicio disponible para grupos a partir de 20 personas.</li>
+          <li>Para hacer efectiva la reserva se requiere un anticipo del 50% del total de la cotización; el saldo restante se cancela el día del evento.</li>
+          <li>El espacio asignado para la realización del asado deberá tener zona de lavado e iluminación.</li>
+          <li>Platos, cubiertos y servilletas desechables están incluidos en el servicio. Si necesita vajilla de cerámica, la podemos suministrar por un costo adicional.</li>
+          <li>El costo del transporte en van de alimentos y personal varía según el lugar del asado.</li>
+          <li>La puntualidad es fundamental para la correcta operación. Se otorga un tiempo de espera máximo de 1 hora a partir de la hora acordada para servir; pasado este tiempo se aplica un cobro adicional de $100.000 por cada hora de retraso.</li>
+          <li>No se realizan reembolsos del anticipo. En caso de cancelación o reprogramación se debe notificar con al menos 5 días hábiles previos a la fecha del evento. El cliente podrá utilizar su saldo a favor en los siguientes 6 meses a partir de la fecha del evento cancelado.</li>
+          <li>En caso de alergias alimentarias o restricciones dietéticas es necesario informar al momento de hacer la reserva.</li>
+          <li>Para eventos al aire libre se recomienda contar con un plan de contingencia en caso de mal clima.</li>
+        </ol>
+      </div>
+    </details>
+  </div>
+</section>
+
+<!-- ============ 14. FAQ ============ -->
+<section class="bloque faq" id="faq">
+  <div class="wrap">
+    <h2 class="titulo-seccion">Lo que todo el mundo pregunta</h2>
+    <div style="margin-top:28px">
+      <details class="acordeon"><summary>¿Cuánto cuesta un asado a domicilio en Bogotá?</summary><div class="acordeon-cuerpo"><p>Nuestros asados van desde $72.000 por persona e incluyen carnes, acompañamientos, barra de salsas, montaje y servicio. El valor final depende del menú que elijas y del lugar del evento.</p></div></details>
+      <details class="acordeon"><summary>¿Cuál es el mínimo de personas?</summary><div class="acordeon-cuerpo"><p>Desde 20 personas. Para grupos grandes, corporativos o familiares, no hay tope.</p></div></details>
+      <details class="acordeon"><summary>¿Qué incluye el precio por persona?</summary><div class="acordeon-cuerpo"><p>Las carnes del asado que elijas, los acompañamientos, la barra de salsas, los platos y cubiertos desechables, el montaje completo, el servicio y la recogida.</p></div></details>
+      <details class="acordeon"><summary>¿A qué zonas de Bogotá van?</summary><div class="acordeon-cuerpo"><p>Toda Bogotá y municipios aledaños, fincas incluidas. El transporte se cotiza según la ubicación.</p></div></details>
+      <details class="acordeon"><summary>¿Qué necesito tener en el lugar?</summary><div class="acordeon-cuerpo"><p>Solo iluminación y zona de lavado. El barril, la barra, los utensilios y el montaje los llevamos nosotros.</p></div></details>
+      <details class="acordeon"><summary>¿Cómo reservo y cuándo pago?</summary><div class="acordeon-cuerpo"><p>Escribes por WhatsApp, armamos la cotización y con el 50% de anticipo queda reservada tu fecha. El saldo se paga el día del evento.</p></div></details>
+      <details class="acordeon"><summary>¿Con cuánta anticipación reservo?</summary><div class="acordeon-cuerpo"><p>Mínimo una semana. En noviembre y diciembre la agenda se llena rapidísimo.</p></div></details>
+      <details class="acordeon"><summary>¿Manejan opciones vegetarianas?</summary><div class="acordeon-cuerpo"><p>Sí, tenemos un Asado Veggie completo. Y si hay alergias o restricciones, avísanos al reservar.</p></div></details>
+      <details class="acordeon"><summary>¿Facturan a empresas?</summary><div class="acordeon-cuerpo"><p>Sí, trabajamos con empresas y emitimos factura electrónica.</p></div></details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 15. CIERRE ============ -->
+<section class="bloque cierre">
+  <div class="wrap">
+    <div class="panel">
+      <h2>¿Ya sabes cuándo es? Nosotros ponemos el resto.</h2>
+      <p>Escríbenos, cuéntanos de tu evento y armamos algo que tus invitados van a estar recordando por meses. Tú no tienes que hacer nada más.</p>
+      <a class="btn btn-claro" href="https://wa.me/573000000000?text=Hey!%20Quiero%20reservar%20un%20asado%20con%20The%20Grill%20Gang.%20Mi%20evento%20es%20el%20%5Bfecha%5D%20en%20%5Bzona%5D%20para%20%5Bn%C3%BAmero%5D%20personas.&utm_source=landing&utm_medium=cta&utm_campaign=cierre">🔥 Reservar por WhatsApp</a>
+      <p class="micro" style="color:var(--rosa);margin-top:20px">Desde $72.000 por persona <span class="ast" style="color:var(--rosa-claro)">✱</span> Cotización sin compromiso <span class="ast" style="color:var(--rosa-claro)">✱</span> Respuesta rápida</p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="cuadros" role="presentation"></div>
+
+<!-- ============ 16. FOOTER ============ -->
+<footer>
+  <div class="wrap">
+    <!-- SLOT DE LOGO: insertar aquí la versión en negativo del SVG oficial -->
+    <p class="tagline">Natural Born Grillers — ¡Calidad top!</p>
+    <nav class="links" aria-label="Pie de página">
+      <a href="#menu">Menú</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#faq">Preguntas frecuentes</a>
+      <a href="#antes-de-reservar">Términos y condiciones</a>
+      <!-- PENDIENTE: enlaces reales de Instagram y correo -->
+      <a href="#">Instagram</a>
+    </nav>
+    <p class="legal">Asados a domicilio en Bogotá y municipios aledaños · Eventos desde 20 personas</p>
+  </div>
+</footer>
+
+<a class="flotante" href="https://wa.me/573000000000?text=Hey!%20Quiero%20cotizar%20un%20asado%20con%20The%20Grill%20Gang.&utm_source=landing&utm_medium=cta&utm_campaign=flotante" aria-label="Reservar por WhatsApp">💬 Reservar</a>
+
+</body>
+</html>
