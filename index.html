@@ -497,7 +497,7 @@ footer .legal{font-size:.85rem;opacity:.85}
       <a href="#faq">Preguntas</a>
     </nav>
     <a class="btn btn-claro" style="font-size:16px;padding:11px 20px"
-       href="https://wa.me/573000000000?text=Hey!%20Quiero%20cotizar%20un%20asado%20con%20The%20Grill%20Gang.%20Mi%20evento%20es%20el%20%5Bfecha%5D%20en%20%5Bzona%5D%20para%20%5Bn%C3%BAmero%5D%20personas.&utm_source=landing&utm_medium=cta&utm_campaign=header">Reservar</a>
+       href="#cotizador">Reservar</a>
   </div>
 </header>
 
@@ -514,7 +514,7 @@ footer .legal{font-size:.85rem;opacity:.85}
 
     <p class="hero-sub">Relájate. <strong>The Grill Gang</strong> monta la mejor <strong>barra de asado a domicilio de Bogotá</strong> en tu casa, tu finca o donde tú digas. Carnes maduradas premium al barril, servicio completo y cero estrés para ti.</p>
 
-    <a class="btn btn-primario" href="https://wa.me/573000000000?text=Hey!%20Quiero%20cotizar%20un%20asado%20con%20The%20Grill%20Gang.%20Mi%20evento%20es%20el%20%5Bfecha%5D%20en%20%5Bzona%5D%20para%20%5Bn%C3%BAmero%5D%20personas.&utm_source=landing&utm_medium=cta&utm_campaign=hero">🔥 Reservar mi asado</a>
+    <a class="btn btn-primario" href="#cotizador">🔥 Reservar mi asado</a>
 
     <p class="micro">Desde $72.000 por persona <span class="ast">✱</span> Eventos desde 20 personas <span class="ast">✱</span> Te respondemos en minutos</p>
 
@@ -704,42 +704,6 @@ footer .legal{font-size:.85rem;opacity:.85}
   </div>
 </section>
 
-<!-- ============ 8b. COTIZADOR ============ -->
-<section class="bloque" id="cotizador">
-  <div class="wrap">
-    <div class="centro">
-      <h2 class="titulo-seccion">Arma tu asado y cotiza en un minuto</h2>
-      <p class="intro-seccion">Elige tu plan, cuántos son y qué más quieres. Te armamos el mensaje y lo mandas por WhatsApp.</p>
-    </div>
-    <form class="cotizador" id="cot-form" novalidate>
-      <div class="barra-menu"><h3>Cotizador</h3></div>
-      <div class="cot-cuerpo">
-        <div class="cot-form">
-          <div class="cot-paso"><h4>1. Tu plan</h4><div class="cot-planes"><label class="cot-plan"><input type="radio" name="plan" value="Asado Premium" data-precio="88000" checked><span>Asado Premium<small>$88.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Asado Clásico" data-precio="76000"><span>Asado Clásico<small>$76.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Asado Veggie" data-precio="72000"><span>Asado Veggie<small>$72.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Barra Mexicana" data-precio="78000"><span>Barra Mexicana<small>$78.000 p/p</small></span></label></div></div>
-          <div class="cot-paso"><h4>2. Tu evento</h4>
-            <div class="cot-campos">
-              <label>Número de personas<input type="number" id="cot-personas" min="20" value="20" inputmode="numeric"></label>
-              <label>Fecha del evento<input type="date" id="cot-fecha"></label>
-              <label>Ciudad / zona<select id="cot-zona"><option>Bogotá</option><option>Chía / Cajicá</option><option>La Calera</option><option>Sopó / Guasca</option><option>Otra (finca / fuera de Bogotá)</option></select></label>
-              <label>Dirección o barrio<input type="text" id="cot-dir" placeholder="Ej: Chicó, finca en Tabio"></label>
-            </div>
-          </div>
-          <details class="acordeon cot-paso"><summary>3. Entradas (opcional)</summary><div class="acordeon-cuerpo"><ul class="cot-extras"><li><span class="n">Canasta de patacón x3</span><span class="pr">$24.000</span><input type="number" min="0" max="50" value="0" data-extra="patacon" aria-label="Cantidad de Canasta de patacón x3"></li><li><span class="n">Arancinis de morcilla x3</span><span class="pr">$11.000</span><input type="number" min="0" max="50" value="0" data-extra="arancini" aria-label="Cantidad de Arancinis de morcilla x3"></li><li><span class="n">Frituras colombianas x3</span><span class="pr">$9.000</span><input type="number" min="0" max="50" value="0" data-extra="frituras" aria-label="Cantidad de Frituras colombianas x3"></li><li><span class="n">Ceviche de camarón</span><span class="pr">$28.000</span><input type="number" min="0" max="50" value="0" data-extra="ceviche" aria-label="Cantidad de Ceviche de camarón"></li><li><span class="n">Arepa de choclo con chicharrón</span><span class="pr">$26.000</span><input type="number" min="0" max="50" value="0" data-extra="arepa" aria-label="Cantidad de Arepa de choclo con chicharrón"></li><li><span class="n">Pulpo a la parrilla (8 personas)</span><span class="pr">$420.000</span><input type="number" min="0" max="50" value="0" data-extra="pulpo" aria-label="Cantidad de Pulpo a la parrilla (8 personas)"></li></ul></div></details>
-          <details class="acordeon cot-paso"><summary>4. Adicionales (opcional)</summary><div class="acordeon-cuerpo"><ul class="cot-extras"><li><span class="n">Costillas St. Louis 2.500 g (10 porc.)</span><span class="pr">$380.000</span><input type="number" min="0" max="50" value="0" data-extra="costillas" aria-label="Cantidad de Costillas St. Louis 2.500 g (10 porc.)"></li><li><span class="n">Rib eye 2.000 g (13 porc.)</span><span class="pr">$330.000</span><input type="number" min="0" max="50" value="0" data-extra="ribeye" aria-label="Cantidad de Rib eye 2.000 g (13 porc.)"></li><li><span class="n">Chunchullo 1.500 g (10 porc.)</span><span class="pr">$180.000</span><input type="number" min="0" max="50" value="0" data-extra="chunchullo" aria-label="Cantidad de Chunchullo 1.500 g (10 porc.)"></li><li><span class="n">Chicharrón carnudo 2.000 g (10 porc.)</span><span class="pr">$180.000</span><input type="number" min="0" max="50" value="0" data-extra="chicharron" aria-label="Cantidad de Chicharrón carnudo 2.000 g (10 porc.)"></li><li><span class="n">Pollo parrillado (10 porc.)</span><span class="pr">$140.000</span><input type="number" min="0" max="50" value="0" data-extra="pollo" aria-label="Cantidad de Pollo parrillado (10 porc.)"></li><li><span class="n">Ensalada fresca x10</span><span class="pr">$120.000</span><input type="number" min="0" max="50" value="0" data-extra="ensalada" aria-label="Cantidad de Ensalada fresca x10"></li><li><span class="n">Salmón steak 350 g</span><span class="pr">$52.000</span><input type="number" min="0" max="50" value="0" data-extra="salmon" aria-label="Cantidad de Salmón steak 350 g"></li><li><span class="n">Mazorca / maduro / arepa (und.)</span><span class="pr">$9.000</span><input type="number" min="0" max="50" value="0" data-extra="acomp" aria-label="Cantidad de Mazorca / maduro / arepa (und.)"></li></ul></div></details>
-        </div>
-        <aside class="cot-resumen" aria-live="polite">
-          <h4>Tu cotización</h4>
-          <ul class="cot-lineas" id="cot-lineas"></ul>
-          <div class="cot-total"><span>Total aprox.</span><span id="cot-total">$0</span></div>
-          <p class="cot-nota">Valor estimado. No incluye transporte (según zona). Te confirmamos disponibilidad y precio final por WhatsApp.</p>
-          <p class="cot-error" id="cot-error"></p>
-          <button type="submit" class="btn btn-claro">📲 Enviar por WhatsApp</button>
-        </aside>
-      </div>
-    </form>
-  </div>
-</section>
-
 <!-- ============ 3. EL PROBLEMA ============ -->
 <section class="bloque problema">
   <div class="wrap">
@@ -775,7 +739,7 @@ footer .legal{font-size:.85rem;opacity:.85}
     <p class="cierre-beneficio">Tu única tarea es decidir a quién invitas. En serio, esa es toda tu chamba.</p>
 
     <p class="centro" style="text-align:center">
-      <a class="btn btn-primario" href="https://wa.me/573000000000?text=Hey!%20Quiero%20que%20The%20Grill%20Gang%20se%20encargue%20de%20mi%20evento.%20Es%20el%20%5Bfecha%5D%20en%20%5Bzona%5D%20para%20%5Bn%C3%BAmero%5D%20personas.&utm_source=landing&utm_medium=cta&utm_campaign=beneficios">🔥 Quiero que se encarguen de todo</a>
+      <a class="btn btn-primario" href="#cotizador">🔥 Quiero que se encarguen de todo</a>
     </p>
   </div>
 </section>
@@ -901,14 +865,39 @@ footer .legal{font-size:.85rem;opacity:.85}
 </section>
 
 <!-- ============ 15. CIERRE ============ -->
-<section class="bloque cierre">
+<section class="bloque cierre" id="cotizador">
   <div class="wrap">
     <div class="panel">
       <h2>¿Ya sabes cuándo es? Nosotros ponemos el resto.</h2>
       <p>Escríbenos, cuéntanos de tu evento y armamos algo que tus invitados van a estar recordando por meses. Tú no tienes que hacer nada más.</p>
-      <a class="btn btn-claro" href="https://wa.me/573000000000?text=Hey!%20Quiero%20reservar%20un%20asado%20con%20The%20Grill%20Gang.%20Mi%20evento%20es%20el%20%5Bfecha%5D%20en%20%5Bzona%5D%20para%20%5Bn%C3%BAmero%5D%20personas.&utm_source=landing&utm_medium=cta&utm_campaign=cierre">🔥 Reservar por WhatsApp</a>
       <p class="micro" style="color:var(--rosa);margin-top:20px">Desde $72.000 por persona <span class="ast" style="color:var(--rosa-claro)">✱</span> Cotización sin compromiso <span class="ast" style="color:var(--rosa-claro)">✱</span> Respuesta rápida</p>
     </div>
+    <form class="cotizador" id="cot-form" novalidate>
+      <div class="barra-menu"><h3>Cotizador</h3></div>
+      <div class="cot-cuerpo">
+        <div class="cot-form">
+          <div class="cot-paso"><h4>1. Tu plan</h4><div class="cot-planes"><label class="cot-plan"><input type="radio" name="plan" value="Asado Premium" data-precio="88000" checked><span>Asado Premium<small>$88.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Asado Clásico" data-precio="76000"><span>Asado Clásico<small>$76.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Asado Veggie" data-precio="72000"><span>Asado Veggie<small>$72.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Barra Mexicana" data-precio="78000"><span>Barra Mexicana<small>$78.000 p/p</small></span></label></div></div>
+          <div class="cot-paso"><h4>2. Tu evento</h4>
+            <div class="cot-campos">
+              <label>Número de personas<input type="number" id="cot-personas" min="20" value="20" inputmode="numeric"></label>
+              <label>Fecha del evento<input type="date" id="cot-fecha"></label>
+              <label>Ciudad / zona<select id="cot-zona"><option>Bogotá</option><option>Chía / Cajicá</option><option>La Calera</option><option>Sopó / Guasca</option><option>Otra (finca / fuera de Bogotá)</option></select></label>
+              <label>Dirección o barrio<input type="text" id="cot-dir" placeholder="Ej: Chicó, finca en Tabio"></label>
+            </div>
+          </div>
+          <details class="acordeon cot-paso"><summary>3. Entradas (opcional)</summary><div class="acordeon-cuerpo"><ul class="cot-extras"><li><span class="n">Canasta de patacón x3</span><span class="pr">$24.000</span><input type="number" min="0" max="50" value="0" data-extra="patacon" aria-label="Cantidad de Canasta de patacón x3"></li><li><span class="n">Arancinis de morcilla x3</span><span class="pr">$11.000</span><input type="number" min="0" max="50" value="0" data-extra="arancini" aria-label="Cantidad de Arancinis de morcilla x3"></li><li><span class="n">Frituras colombianas x3</span><span class="pr">$9.000</span><input type="number" min="0" max="50" value="0" data-extra="frituras" aria-label="Cantidad de Frituras colombianas x3"></li><li><span class="n">Ceviche de camarón</span><span class="pr">$28.000</span><input type="number" min="0" max="50" value="0" data-extra="ceviche" aria-label="Cantidad de Ceviche de camarón"></li><li><span class="n">Arepa de choclo con chicharrón</span><span class="pr">$26.000</span><input type="number" min="0" max="50" value="0" data-extra="arepa" aria-label="Cantidad de Arepa de choclo con chicharrón"></li><li><span class="n">Pulpo a la parrilla (8 personas)</span><span class="pr">$420.000</span><input type="number" min="0" max="50" value="0" data-extra="pulpo" aria-label="Cantidad de Pulpo a la parrilla (8 personas)"></li></ul></div></details>
+          <details class="acordeon cot-paso"><summary>4. Adicionales (opcional)</summary><div class="acordeon-cuerpo"><ul class="cot-extras"><li><span class="n">Costillas St. Louis 2.500 g (10 porc.)</span><span class="pr">$380.000</span><input type="number" min="0" max="50" value="0" data-extra="costillas" aria-label="Cantidad de Costillas St. Louis 2.500 g (10 porc.)"></li><li><span class="n">Rib eye 2.000 g (13 porc.)</span><span class="pr">$330.000</span><input type="number" min="0" max="50" value="0" data-extra="ribeye" aria-label="Cantidad de Rib eye 2.000 g (13 porc.)"></li><li><span class="n">Chunchullo 1.500 g (10 porc.)</span><span class="pr">$180.000</span><input type="number" min="0" max="50" value="0" data-extra="chunchullo" aria-label="Cantidad de Chunchullo 1.500 g (10 porc.)"></li><li><span class="n">Chicharrón carnudo 2.000 g (10 porc.)</span><span class="pr">$180.000</span><input type="number" min="0" max="50" value="0" data-extra="chicharron" aria-label="Cantidad de Chicharrón carnudo 2.000 g (10 porc.)"></li><li><span class="n">Pollo parrillado (10 porc.)</span><span class="pr">$140.000</span><input type="number" min="0" max="50" value="0" data-extra="pollo" aria-label="Cantidad de Pollo parrillado (10 porc.)"></li><li><span class="n">Ensalada fresca x10</span><span class="pr">$120.000</span><input type="number" min="0" max="50" value="0" data-extra="ensalada" aria-label="Cantidad de Ensalada fresca x10"></li><li><span class="n">Salmón steak 350 g</span><span class="pr">$52.000</span><input type="number" min="0" max="50" value="0" data-extra="salmon" aria-label="Cantidad de Salmón steak 350 g"></li><li><span class="n">Mazorca / maduro / arepa (und.)</span><span class="pr">$9.000</span><input type="number" min="0" max="50" value="0" data-extra="acomp" aria-label="Cantidad de Mazorca / maduro / arepa (und.)"></li></ul></div></details>
+        </div>
+        <aside class="cot-resumen" aria-live="polite">
+          <h4>Tu cotización</h4>
+          <ul class="cot-lineas" id="cot-lineas"></ul>
+          <div class="cot-total"><span>Total aprox.</span><span id="cot-total">$0</span></div>
+          <p class="cot-nota">Valor estimado. No incluye transporte (según zona). Te confirmamos disponibilidad y precio final por WhatsApp.</p>
+          <p class="cot-error" id="cot-error"></p>
+          <button type="submit" class="btn btn-claro">📲 Enviar por WhatsApp</button>
+        </aside>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -933,7 +922,7 @@ footer .legal{font-size:.85rem;opacity:.85}
   </div>
 </footer>
 
-<a class="flotante" href="https://wa.me/573000000000?text=Hey!%20Quiero%20cotizar%20un%20asado%20con%20The%20Grill%20Gang.&utm_source=landing&utm_medium=cta&utm_campaign=flotante" aria-label="Reservar por WhatsApp">💬 Reservar</a>
+<a class="flotante" href="#cotizador" aria-label="Cotizar mi asado">💬 Reservar</a>
 
 <script>
 (function(){
