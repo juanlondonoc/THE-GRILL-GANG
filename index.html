@@ -443,6 +443,41 @@ footer .legal{font-size:.85rem;opacity:.85}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
 .salta{position:absolute;left:-9999px;background:var(--carbon);color:var(--rosa-claro);padding:12px 18px;z-index:99}
 .salta:focus{left:12px;top:12px}
+
+/* ---------- Cotizador ---------- */
+.cotizador{border:4px solid var(--rojo);border-radius:24px;overflow:hidden;background:rgba(255,255,255,.35);margin-top:30px}
+.cot-cuerpo{display:grid;grid-template-columns:1.4fr 1fr;gap:0}
+@media (max-width:900px){.cot-cuerpo{grid-template-columns:1fr}}
+.cot-form{padding:28px 26px}
+.cot-paso{margin-bottom:26px}
+.cot-paso>h4{font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;color:var(--rojo);font-size:1.2rem;margin:0 0 10px}
+.cot-planes{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+@media (max-width:520px){.cot-planes{grid-template-columns:1fr}}
+.cot-plan{position:relative;display:block;cursor:pointer}
+.cot-plan input{position:absolute;opacity:0}
+.cot-plan span{display:block;border:3px solid var(--carbon);border-radius:14px;padding:12px 14px;font-family:var(--item);font-weight:800;font-style:italic;text-transform:uppercase;font-size:1.1rem;line-height:1.1;background:rgba(255,255,255,.4)}
+.cot-plan small{display:block;color:var(--rojo);font-size:.95rem}
+.cot-plan input:checked+span{background:var(--rojo);border-color:var(--rojo);color:var(--rosa-claro)}
+.cot-plan input:checked+span small{color:var(--rosa-claro)}
+.cot-plan input:focus-visible+span{outline:3px solid var(--carbon);outline-offset:3px}
+.cot-campos{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media (max-width:520px){.cot-campos{grid-template-columns:1fr}}
+.cot-campos label{display:block;font-weight:600;font-size:.9rem}
+.cotizador input[type=number],.cotizador input[type=date],.cotizador input[type=text],.cotizador select{width:100%;font:inherit;padding:10px 12px;border:3px solid var(--carbon);border-radius:12px;background:#fff;color:var(--tinta);margin-top:4px;box-sizing:border-box}
+.cot-extras{list-style:none;margin:0;padding:0}
+.cot-extras li{display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:2px dotted rgba(51,42,44,.3)}
+.cot-extras li:last-child{border-bottom:0}
+.cot-extras .n{flex:1;font-size:.95rem;line-height:1.3}
+.cot-extras .pr{font-family:var(--item);font-weight:800;font-style:italic;color:var(--rojo);white-space:nowrap}
+.cot-extras input{width:64px!important;margin:0!important;padding:6px 8px!important;text-align:center}
+.cot-resumen{background:var(--carbon);color:var(--rosa-claro);padding:28px 26px;display:flex;flex-direction:column;gap:12px}
+.cot-resumen h4{font-family:var(--display);font-size:1.8rem;color:var(--rosa);margin:0;text-transform:uppercase}
+.cot-lineas{list-style:none;margin:0;padding:0;font-size:.95rem}
+.cot-lineas li{display:flex;justify-content:space-between;gap:10px;padding:6px 0;border-bottom:1px dashed rgba(249,221,230,.3)}
+.cot-total{font-family:var(--item);font-weight:800;font-style:italic;font-size:2rem;color:var(--rosa);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.cot-nota{font-size:.82rem;opacity:.8;margin:0}
+.cot-error{color:#FFB3AE;font-weight:600;font-size:.9rem;margin:0;min-height:1.2em}
+.cot-resumen .btn{text-align:center;margin-top:auto}
 </style>
 </head>
 <body>
@@ -664,8 +699,44 @@ footer .legal{font-size:.85rem;opacity:.85}
     <div class="acciones-menu">
       <!-- PENDIENTE: enlazar el PDF del menú completo -->
       <a class="btn btn-linea" href="#" aria-label="Descargar menú completo en PDF">📄 Descargar menú completo</a>
-      <a class="btn btn-primario" href="https://wa.me/573000000000?text=Hey!%20Me%20interesa%20uno%20de%20los%20asados%20de%20The%20Grill%20Gang.%20%C2%BFMe%20cotizan%20para%20%5Bn%C3%BAmero%5D%20personas%3F&utm_source=landing&utm_medium=cta&utm_campaign=menu">🔥 Cotizar mi asado</a>
+      <a class="btn btn-primario" href="#cotizador">🔥 Cotizar mi asado</a>
     </div>
+  </div>
+</section>
+
+<!-- ============ 8b. COTIZADOR ============ -->
+<section class="bloque" id="cotizador">
+  <div class="wrap">
+    <div class="centro">
+      <h2 class="titulo-seccion">Arma tu asado y cotiza en un minuto</h2>
+      <p class="intro-seccion">Elige tu plan, cuántos son y qué más quieres. Te armamos el mensaje y lo mandas por WhatsApp.</p>
+    </div>
+    <form class="cotizador" id="cot-form" novalidate>
+      <div class="barra-menu"><h3>Cotizador</h3></div>
+      <div class="cot-cuerpo">
+        <div class="cot-form">
+          <div class="cot-paso"><h4>1. Tu plan</h4><div class="cot-planes"><label class="cot-plan"><input type="radio" name="plan" value="Asado Premium" data-precio="88000" checked><span>Asado Premium<small>$88.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Asado Clásico" data-precio="76000"><span>Asado Clásico<small>$76.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Asado Veggie" data-precio="72000"><span>Asado Veggie<small>$72.000 p/p</small></span></label><label class="cot-plan"><input type="radio" name="plan" value="Barra Mexicana" data-precio="78000"><span>Barra Mexicana<small>$78.000 p/p</small></span></label></div></div>
+          <div class="cot-paso"><h4>2. Tu evento</h4>
+            <div class="cot-campos">
+              <label>Número de personas<input type="number" id="cot-personas" min="20" value="20" inputmode="numeric"></label>
+              <label>Fecha del evento<input type="date" id="cot-fecha"></label>
+              <label>Ciudad / zona<select id="cot-zona"><option>Bogotá</option><option>Chía / Cajicá</option><option>La Calera</option><option>Sopó / Guasca</option><option>Otra (finca / fuera de Bogotá)</option></select></label>
+              <label>Dirección o barrio<input type="text" id="cot-dir" placeholder="Ej: Chicó, finca en Tabio"></label>
+            </div>
+          </div>
+          <details class="acordeon cot-paso"><summary>3. Entradas (opcional)</summary><div class="acordeon-cuerpo"><ul class="cot-extras"><li><span class="n">Canasta de patacón x3</span><span class="pr">$24.000</span><input type="number" min="0" max="50" value="0" data-extra="patacon" aria-label="Cantidad de Canasta de patacón x3"></li><li><span class="n">Arancinis de morcilla x3</span><span class="pr">$11.000</span><input type="number" min="0" max="50" value="0" data-extra="arancini" aria-label="Cantidad de Arancinis de morcilla x3"></li><li><span class="n">Frituras colombianas x3</span><span class="pr">$9.000</span><input type="number" min="0" max="50" value="0" data-extra="frituras" aria-label="Cantidad de Frituras colombianas x3"></li><li><span class="n">Ceviche de camarón</span><span class="pr">$28.000</span><input type="number" min="0" max="50" value="0" data-extra="ceviche" aria-label="Cantidad de Ceviche de camarón"></li><li><span class="n">Arepa de choclo con chicharrón</span><span class="pr">$26.000</span><input type="number" min="0" max="50" value="0" data-extra="arepa" aria-label="Cantidad de Arepa de choclo con chicharrón"></li><li><span class="n">Pulpo a la parrilla (8 personas)</span><span class="pr">$420.000</span><input type="number" min="0" max="50" value="0" data-extra="pulpo" aria-label="Cantidad de Pulpo a la parrilla (8 personas)"></li></ul></div></details>
+          <details class="acordeon cot-paso"><summary>4. Adicionales (opcional)</summary><div class="acordeon-cuerpo"><ul class="cot-extras"><li><span class="n">Costillas St. Louis 2.500 g (10 porc.)</span><span class="pr">$380.000</span><input type="number" min="0" max="50" value="0" data-extra="costillas" aria-label="Cantidad de Costillas St. Louis 2.500 g (10 porc.)"></li><li><span class="n">Rib eye 2.000 g (13 porc.)</span><span class="pr">$330.000</span><input type="number" min="0" max="50" value="0" data-extra="ribeye" aria-label="Cantidad de Rib eye 2.000 g (13 porc.)"></li><li><span class="n">Chunchullo 1.500 g (10 porc.)</span><span class="pr">$180.000</span><input type="number" min="0" max="50" value="0" data-extra="chunchullo" aria-label="Cantidad de Chunchullo 1.500 g (10 porc.)"></li><li><span class="n">Chicharrón carnudo 2.000 g (10 porc.)</span><span class="pr">$180.000</span><input type="number" min="0" max="50" value="0" data-extra="chicharron" aria-label="Cantidad de Chicharrón carnudo 2.000 g (10 porc.)"></li><li><span class="n">Pollo parrillado (10 porc.)</span><span class="pr">$140.000</span><input type="number" min="0" max="50" value="0" data-extra="pollo" aria-label="Cantidad de Pollo parrillado (10 porc.)"></li><li><span class="n">Ensalada fresca x10</span><span class="pr">$120.000</span><input type="number" min="0" max="50" value="0" data-extra="ensalada" aria-label="Cantidad de Ensalada fresca x10"></li><li><span class="n">Salmón steak 350 g</span><span class="pr">$52.000</span><input type="number" min="0" max="50" value="0" data-extra="salmon" aria-label="Cantidad de Salmón steak 350 g"></li><li><span class="n">Mazorca / maduro / arepa (und.)</span><span class="pr">$9.000</span><input type="number" min="0" max="50" value="0" data-extra="acomp" aria-label="Cantidad de Mazorca / maduro / arepa (und.)"></li></ul></div></details>
+        </div>
+        <aside class="cot-resumen" aria-live="polite">
+          <h4>Tu cotización</h4>
+          <ul class="cot-lineas" id="cot-lineas"></ul>
+          <div class="cot-total"><span>Total aprox.</span><span id="cot-total">$0</span></div>
+          <p class="cot-nota">Valor estimado. No incluye transporte (según zona). Te confirmamos disponibilidad y precio final por WhatsApp.</p>
+          <p class="cot-error" id="cot-error"></p>
+          <button type="submit" class="btn btn-claro">📲 Enviar por WhatsApp</button>
+        </aside>
+      </div>
+    </form>
   </div>
 </section>
 
@@ -864,5 +935,43 @@ footer .legal{font-size:.85rem;opacity:.85}
 
 <a class="flotante" href="https://wa.me/573000000000?text=Hey!%20Quiero%20cotizar%20un%20asado%20con%20The%20Grill%20Gang.&utm_source=landing&utm_medium=cta&utm_campaign=flotante" aria-label="Reservar por WhatsApp">💬 Reservar</a>
 
+<script>
+(function(){
+  var WHATSAPP='573000000000'; // PENDIENTE: número real
+  var NOMBRES={"patacon": "Canasta de patacón x3", "arancini": "Arancinis de morcilla x3", "frituras": "Frituras colombianas x3", "ceviche": "Ceviche de camarón", "arepa": "Arepa de choclo con chicharrón", "pulpo": "Pulpo a la parrilla (8 personas)", "costillas": "Costillas St. Louis 2.500 g (10 porc.)", "ribeye": "Rib eye 2.000 g (13 porc.)", "chunchullo": "Chunchullo 1.500 g (10 porc.)", "chicharron": "Chicharrón carnudo 2.000 g (10 porc.)", "pollo": "Pollo parrillado (10 porc.)", "ensalada": "Ensalada fresca x10", "salmon": "Salmón steak 350 g", "acomp": "Mazorca / maduro / arepa (und.)"}, PRECIOS={"patacon": 24000, "arancini": 11000, "frituras": 9000, "ceviche": 28000, "arepa": 26000, "pulpo": 420000, "costillas": 380000, "ribeye": 330000, "chunchullo": 180000, "chicharron": 180000, "pollo": 140000, "ensalada": 120000, "salmon": 52000, "acomp": 9000};
+  var f=document.getElementById('cot-form'); if(!f) return;
+  var $=function(id){return document.getElementById(id)};
+  var fmt=function(n){return '$'+n.toLocaleString('es-CO')};
+  var fecha=$('cot-fecha'); var h=new Date(); h.setDate(h.getDate()+1); fecha.min=h.toISOString().slice(0,10);
+  function datos(){
+    var plan=f.querySelector('input[name=plan]:checked');
+    var pers=parseInt($('cot-personas').value,10)||0;
+    var extras=[].slice.call(f.querySelectorAll('[data-extra]')).map(function(i){var q=parseInt(i.value,10)||0;return {k:i.dataset.extra,q:q,t:q*PRECIOS[i.dataset.extra]}}).filter(function(x){return x.q>0});
+    var base=pers*Number(plan.dataset.precio);
+    return {plan:plan.value,pp:Number(plan.dataset.precio),pers:pers,base:base,extras:extras,total:extras.reduce(function(a,x){return a+x.t},base)};
+  }
+  function pintar(){
+    var d=datos(), l=$('cot-lineas'); l.innerHTML='';
+    var add=function(a,b){var li=document.createElement('li');li.innerHTML='<span></span><span></span>';li.children[0].textContent=a;li.children[1].textContent=b;l.appendChild(li)};
+    add(d.plan+' x '+d.pers, fmt(d.base));
+    d.extras.forEach(function(x){add(NOMBRES[x.k]+' x '+x.q, fmt(x.t))});
+    $('cot-total').textContent=fmt(d.total);
+    $('cot-error').textContent='';
+  }
+  f.addEventListener('input',pintar); f.addEventListener('change',pintar);
+  f.addEventListener('submit',function(e){
+    e.preventDefault(); var d=datos(), err=$('cot-error');
+    if(d.pers<20){err.textContent='El mínimo es de 20 personas.';$('cot-personas').focus();return}
+    if(!fecha.value){err.textContent='Elige la fecha de tu evento.';fecha.focus();return}
+    var fl=new Date(fecha.value+'T12:00').toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
+    var dir=$('cot-dir').value.trim();
+    var m=['Hey! Quiero cotizar un asado con The Grill Gang 🔥','','*Plan:* '+d.plan+' ('+fmt(d.pp)+' p/p)','*Personas:* '+d.pers,'*Fecha:* '+fl,'*Ubicación:* '+$('cot-zona').value+(dir?' – '+dir:'')];
+    if(d.extras.length){m.push('','*Entradas y adicionales:*');d.extras.forEach(function(x){m.push('• '+NOMBRES[x.k]+' x'+x.q+' – '+fmt(x.t))})}
+    m.push('','*Total estimado:* '+fmt(d.total),'','¿Tienen disponibilidad?');
+    window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(m.join('\n')),'_blank','noopener');
+  });
+  pintar();
+})();
+</script>
 </body>
 </html>
