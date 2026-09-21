@@ -202,8 +202,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   color:var(--rosa-claro);
   text-align:center;padding:84px 0;
 }
-.frasote h2{
-  font-family:var(--display);
+.frasote h2,.trato-titulo{
+  font-family:var(--display);line-height:.94;text-transform:uppercase;
   font-size:clamp(2.1rem,7vw,5rem);
   color:var(--rosa-claro);
   transform:skewX(-6deg);
@@ -248,6 +248,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 }
 
 /* ---------- Sección problema ---------- */
+.trato{border-radius:24px;padding:56px 24px}
 .problema .panel p:last-child{margin-bottom:0;font-family:var(--item);font-style:italic;font-weight:800;font-size:1.5rem;color:var(--rosa);text-transform:uppercase}
 
 /* ---------- Beneficios (tabla tachada) ---------- */
@@ -704,51 +705,28 @@ footer .legal{font-size:.85rem;opacity:.85}
   </div>
 </section>
 
-<!-- ============ 3. EL PROBLEMA ============ -->
-<section class="bloque problema">
-  <div class="wrap">
-    <h2 class="titulo-seccion" style="max-width:20ch">Organizar un asado para 30 personas no es un plan, parce. Es un trabajo.</h2>
-    <div class="panel" style="margin-top:28px">
-      <p>Cotizar la carne. Cargar el mercado. Prender el fuego dos horas antes. Servir de a poquitos mientras todos ya comieron. Y al final, lavar.</p>
-      <p>Al que organiza siempre le toca la peor parte: no disfrutar su propio asado.</p>
-      <p>Ahí es donde entra el gang.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ============ 4. BENEFICIOS ============ -->
+<!-- ============ 3. PROBLEMA + BENEFICIOS ============ -->
 <section class="bloque" id="beneficios">
   <div class="wrap">
-    <h2 class="titulo-seccion">Tú no tienes que preocuparte por nada. Literal, por nada.</h2>
-    <p class="intro-seccion">No es una forma de hablar. Es la lista real de todo lo que dejas de hacer cuando nos reservas:</p>
+    <h2 class="titulo-seccion" style="max-width:20ch">Organizar un asado para 30 personas no es un plan. Es un trabajo.</h2>
+    <p class="intro-seccion">Cotizar la carne, cargar el mercado, cuidar el fuego, servir de a poquitos y al final lavar. Al que organiza le toca no disfrutar su propio asado. Ahí es donde entra el gang.</p>
 
     <table class="beneficios-tabla">
       <thead><tr><th scope="col">Lo que ya no haces</th><th scope="col">Lo que hacemos nosotros</th></tr></thead>
       <tbody>
         <tr><td>Buscar dónde comprar buena carne</td><td>Llegamos con cortes madurados seleccionados</td></tr>
-        <tr><td>Cargar mercado y hielo</td><td>Llevamos absolutamente todo</td></tr>
+        <tr><td>Cargar mercado, hielo, mesas y platos</td><td>Llevamos y montamos la barra completa</td></tr>
         <tr><td>Prender el fuego y cuidarlo</td><td>El barril lo manejamos nosotros</td></tr>
-        <tr><td>Cocinar mientras todos parchan</td><td>Cocinamos en vivo, tú estás con tu gente</td></tr>
-        <tr><td>Servir plato por plato</td><td>Servimos a todos tus invitados</td></tr>
-        <tr><td>Prestar tu parrilla, mesas, platos</td><td>Montamos la barra completa</td></tr>
-        <tr><td>Comprar platos y cubiertos</td><td>Van incluidos en el servicio</td></tr>
+        <tr><td>Cocinar y servir mientras todos parchan</td><td>Cocinamos y servimos en vivo; tú estás con tu gente</td></tr>
         <tr><td>Quedarte lavando a la 1 a.m.</td><td>Recogemos y nos vamos con todo</td></tr>
       </tbody>
     </table>
 
-    <p class="cierre-beneficio">Tu única tarea es decidir a quién invitas. En serio, esa es toda tu chamba.</p>
-
-    <p class="centro" style="text-align:center">
-      <a class="btn btn-primario" href="#cotizador">🔥 Quiero que se encarguen de todo</a>
-    </p>
-  </div>
-</section>
-
-<!-- ============ 5. FRASE GRANDE ============ -->
-<section class="frasote">
-  <div class="wrap">
-    <h2>Nosotros montamos. Nosotros cocinamos. Nosotros recogemos.</h2>
-    <p class="apoyo">Tú comes, brindas y parchas. Ese es el trato.</p>
+    <div class="frasote trato">
+      <p class="trato-titulo">Nosotros montamos. Nosotros cocinamos. Nosotros recogemos.</p>
+      <p class="apoyo">Tú comes, brindas y parchas. Ese es el trato.</p>
+      <a class="btn btn-claro" href="#cotizador" style="margin-top:28px">🔥 Quiero que se encarguen de todo</a>
+    </div>
   </div>
 </section>
 
