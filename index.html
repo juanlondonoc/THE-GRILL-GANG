@@ -491,7 +491,22 @@ footer .legal{font-size:.85rem;opacity:.85}
 .cot-total{font-family:var(--item);font-weight:800;font-style:italic;font-size:2rem;color:var(--rosa);display:flex;justify-content:space-between;align-items:baseline;gap:10px}
 .cot-nota{font-size:.82rem;opacity:.8;margin:0}
 .cot-error{color:#FFB3AE;font-weight:600;font-size:.9rem;margin:0;min-height:1.2em}
-.cot-resumen .btn{text-align:center;margin-top:auto}
+.cot-botones{display:flex;flex-direction:column;gap:12px;margin-top:auto}
+.cot-botones .btn{text-align:center;width:100%}
+.btn-linea-claro{background:transparent;color:var(--rosa-claro);border:3px solid var(--rosa-claro);padding:13px 24px}
+.btn-linea-claro:hover,.btn-linea-claro:focus-visible{background:var(--rosa-claro);color:var(--carbon)}
+.cot-lineas li>div{display:flex;flex-direction:column;gap:2px;min-width:0}
+.cot-lineas small{font-size:.76rem;opacity:.7;line-height:1.35}
+.cot-lineas li>span{white-space:nowrap}
+.cot-dialog{border:4px solid var(--rojo);border-radius:24px;padding:0;max-width:420px;width:calc(100% - 32px);background:var(--rosa-claro);color:var(--tinta)}
+.cot-dialog::backdrop{background:rgba(42,34,36,.7)}
+.cot-dialog form{padding:30px 26px;position:relative}
+.cot-dialog h3{font-family:var(--display);color:var(--rojo);font-size:2rem;margin-bottom:8px}
+.cot-dialog label{display:block;font-weight:600;font-size:.9rem;margin-bottom:12px}
+.cot-dialog input{width:100%;font:inherit;padding:10px 12px;border:3px solid var(--carbon);border-radius:12px;background:#fff;color:var(--tinta);margin-top:4px;box-sizing:border-box}
+.cot-dialog .btn{width:100%;text-align:center}
+.cot-dialog .cot-error{color:var(--rojo-oscuro)}
+.cot-cerrar{position:absolute;top:12px;right:14px;background:none;border:0;font-size:1.3rem;cursor:pointer;color:var(--carbon)}
 </style>
 </head>
 <body>
@@ -794,9 +809,12 @@ footer .legal{font-size:.85rem;opacity:.85}
           <h4>Tu cotización</h4>
           <ul class="cot-lineas" id="cot-lineas"></ul>
           <div class="cot-total"><span>Total aprox.</span><span id="cot-total">$0</span></div>
-          <p class="cot-nota">Valor estimado. No incluye transporte (según zona). Te confirmamos disponibilidad y precio final por WhatsApp.</p>
+          <p class="cot-nota">Valor estimado. No incluye transporte (según zona). Te confirmamos disponibilidad y precio final.</p>
           <p class="cot-error" id="cot-error"></p>
-          <button type="submit" class="btn btn-claro">📲 Enviar por WhatsApp</button>
+          <div class="cot-botones">
+            <button type="submit" class="btn btn-claro">📲 Enviar por WhatsApp</button>
+            <button type="button" class="btn btn-linea-claro" id="cot-llamar">📞 Quiero que me llamen</button>
+          </div>
         </aside>
       </div>
     </form>
@@ -842,12 +860,33 @@ footer .legal{font-size:.85rem;opacity:.85}
   </div>
 </footer>
 
+<dialog class="cot-dialog" id="cot-dialog" aria-labelledby="cot-dialog-titulo">
+  <form id="cot-contacto" novalidate>
+    <button type="button" class="cot-cerrar" id="cot-cerrar" aria-label="Cerrar">✕</button>
+    <div id="cot-paso-datos">
+      <h3 id="cot-dialog-titulo">Te llamamos</h3>
+      <p>Déjanos tus datos y te contactamos para confirmar tu cotización.</p>
+      <label>Nombre<input type="text" id="cc-nombre" autocomplete="name" required></label>
+      <label>Correo<input type="email" id="cc-correo" autocomplete="email" required></label>
+      <label>Teléfono / WhatsApp<input type="tel" id="cc-tel" autocomplete="tel" inputmode="tel" required></label>
+      <p class="cot-error" id="cc-error"></p>
+      <button type="submit" class="btn btn-primario" id="cc-enviar">Enviar mis datos</button>
+    </div>
+    <div id="cot-paso-ok" hidden>
+      <h3>¡Listo! 🔥</h3>
+      <p>Recibimos tu cotización. Te vamos a llamar muy pronto.</p>
+      <button type="button" class="btn btn-primario" id="cot-ok">Cerrar</button>
+    </div>
+  </form>
+</dialog>
+
 <a class="flotante" href="#cotizador" aria-label="Cotizar mi asado">💬 Reservar</a>
 
 <script>
 (function(){
   var WHATSAPP='573000000000'; // PENDIENTE: número real
-  var NOMBRES={"patacon": "Canasta de patacón x3", "arancini": "Arancinis de morcilla x3", "frituras": "Frituras colombianas x3", "ceviche": "Ceviche de camarón", "arepa": "Arepa de choclo con chicharrón", "pulpo": "Pulpo a la parrilla (8 personas)", "costillas": "Costillas St. Louis 2.500 g (10 porc.)", "ribeye": "Rib eye 2.000 g (13 porc.)", "chunchullo": "Chunchullo 1.500 g (10 porc.)", "chicharron": "Chicharrón carnudo 2.000 g (10 porc.)", "pollo": "Pollo parrillado (10 porc.)", "ensalada": "Ensalada fresca x10", "salmon": "Salmón steak 350 g", "acomp": "Mazorca / maduro / arepa (und.)"}, PRECIOS={"patacon": 24000, "arancini": 11000, "frituras": 9000, "ceviche": 28000, "arepa": 26000, "pulpo": 420000, "costillas": 380000, "ribeye": 330000, "chunchullo": 180000, "chicharron": 180000, "pollo": 140000, "ensalada": 120000, "salmon": 52000, "acomp": 9000};
+  var SHEETS_URL=''; // PENDIENTE: URL de la app web de Google Apps Script (ver apps-script/Code.gs)
+  var NOMBRES={"patacon": "Canasta de patacón x3", "arancini": "Arancinis de morcilla x3", "frituras": "Frituras colombianas x3", "ceviche": "Ceviche de camarón", "arepa": "Arepa de choclo con chicharrón", "pulpo": "Pulpo a la parrilla (8 personas)", "costillas": "Costillas St. Louis 2.500 g (10 porc.)", "ribeye": "Rib eye 2.000 g (13 porc.)", "chunchullo": "Chunchullo 1.500 g (10 porc.)", "chicharron": "Chicharrón carnudo 2.000 g (10 porc.)", "pollo": "Pollo parrillado (10 porc.)", "ensalada": "Ensalada fresca x10", "salmon": "Salmón steak 350 g", "acomp": "Mazorca / maduro / arepa (und.)"}, PRECIOS={"patacon": 24000, "arancini": 11000, "frituras": 9000, "ceviche": 28000, "arepa": 26000, "pulpo": 420000, "costillas": 380000, "ribeye": 330000, "chunchullo": 180000, "chicharron": 180000, "pollo": 140000, "ensalada": 120000, "salmon": 52000, "acomp": 9000}, DESC={"Asado Premium": "Picaña nacional 21 días de maduración, bondiola ahumada, ceviche de panceta ahumada, chorizo santarrosano, morcilla, papa salada, piña asada, arepa, vegetales, guacamole, ají y chimichurri.", "Asado Clásico": "Brisket ahumado 18 horas al vacío, bondiola ahumada, chorizo santarrosano, morcilla, papa salada, vegetales, guacamole, ají y chimichurri.", "Asado Veggie": "Brocheta de vegetales, pimentón relleno, queso parrillado, ceviche de hongos, papa, piña asada, arepa, guacamole, ají y chimichurri.", "Barra Mexicana": "Tacos x4 (carnitas de cerdo, tinga de pollo, deshebrada de res), estación de toppings y estación de totopos.", "patacon": "Guacamole, hogao, queso y chicharrón.", "frituras": "Mini empanada, mini arepa de huevo y palito de queso.", "ceviche": "Salsa caribeña, vegetales y chips de papa.", "arepa": "Chicharrón glaseado en miel de pimienta y limón.", "pulpo": "Papas rotas, hogao, suero y aceite de cilantro.", "acomp": "Mazorca asada, plátano maduro o arepa de choclo y queso."};
   var f=document.getElementById('cot-form'); if(!f) return;
   var $=function(id){return document.getElementById(id)};
   var fmt=function(n){return '$'+n.toLocaleString('es-CO')};
@@ -857,27 +896,67 @@ footer .legal{font-size:.85rem;opacity:.85}
     var pers=parseInt($('cot-personas').value,10)||0;
     var extras=[].slice.call(f.querySelectorAll('[data-extra]')).map(function(i){var q=parseInt(i.value,10)||0;return {k:i.dataset.extra,q:q,t:q*PRECIOS[i.dataset.extra]}}).filter(function(x){return x.q>0});
     var base=pers*Number(plan.dataset.precio);
-    return {plan:plan.value,pp:Number(plan.dataset.precio),pers:pers,base:base,extras:extras,total:extras.reduce(function(a,x){return a+x.t},base)};
+    var dir=$('cot-dir').value.trim();
+    return {plan:plan.value,pp:Number(plan.dataset.precio),pers:pers,base:base,extras:extras,
+      total:extras.reduce(function(a,x){return a+x.t},base),
+      fecha:fecha.value,ubicacion:$('cot-zona').value+(dir?' – '+dir:'')};
   }
   function pintar(){
     var d=datos(), l=$('cot-lineas'); l.innerHTML='';
-    var add=function(a,b){var li=document.createElement('li');li.innerHTML='<span></span><span></span>';li.children[0].textContent=a;li.children[1].textContent=b;l.appendChild(li)};
-    add(d.plan+' x '+d.pers, fmt(d.base));
-    d.extras.forEach(function(x){add(NOMBRES[x.k]+' x '+x.q, fmt(x.t))});
+    var add=function(a,desc,b){
+      var li=document.createElement('li'), t=document.createElement('div'), n=document.createElement('span'), v=document.createElement('span');
+      n.textContent=a; t.appendChild(n);
+      if(desc){var sm=document.createElement('small');sm.textContent=desc;t.appendChild(sm)}
+      v.textContent=b; li.appendChild(t); li.appendChild(v); l.appendChild(li);
+    };
+    add(d.plan+' x '+d.pers, DESC[d.plan], fmt(d.base));
+    d.extras.forEach(function(x){add(NOMBRES[x.k]+' x '+x.q, DESC[x.k], fmt(x.t))});
     $('cot-total').textContent=fmt(d.total);
     $('cot-error').textContent='';
   }
+  function validar(d){
+    var err=$('cot-error');
+    if(d.pers<20){err.textContent='El mínimo es de 20 personas.';$('cot-personas').focus();return false}
+    if(!d.fecha){err.textContent='Elige la fecha de tu evento.';fecha.focus();return false}
+    return true;
+  }
+  var fechaLarga=function(v){return new Date(v+'T12:00').toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long',year:'numeric'})};
+  var detalleExtras=function(d){return d.extras.map(function(x){return NOMBRES[x.k]+' x'+x.q+' – '+fmt(x.t)})};
+
   f.addEventListener('input',pintar); f.addEventListener('change',pintar);
   f.addEventListener('submit',function(e){
-    e.preventDefault(); var d=datos(), err=$('cot-error');
-    if(d.pers<20){err.textContent='El mínimo es de 20 personas.';$('cot-personas').focus();return}
-    if(!fecha.value){err.textContent='Elige la fecha de tu evento.';fecha.focus();return}
-    var fl=new Date(fecha.value+'T12:00').toLocaleDateString('es-CO',{weekday:'long',day:'numeric',month:'long',year:'numeric'});
-    var dir=$('cot-dir').value.trim();
-    var m=['Hey! Quiero cotizar un asado con The Grill Gang 🔥','','*Plan:* '+d.plan+' ('+fmt(d.pp)+' p/p)','*Personas:* '+d.pers,'*Fecha:* '+fl,'*Ubicación:* '+$('cot-zona').value+(dir?' – '+dir:'')];
-    if(d.extras.length){m.push('','*Entradas y adicionales:*');d.extras.forEach(function(x){m.push('• '+NOMBRES[x.k]+' x'+x.q+' – '+fmt(x.t))})}
+    e.preventDefault(); var d=datos(); if(!validar(d)) return;
+    var m=['Hey! Quiero cotizar un asado con The Grill Gang 🔥','','*Plan:* '+d.plan+' ('+fmt(d.pp)+' p/p)','*Personas:* '+d.pers,'*Fecha:* '+fechaLarga(d.fecha),'*Ubicación:* '+d.ubicacion];
+    if(d.extras.length){m.push('','*Entradas y adicionales:*');detalleExtras(d).forEach(function(x){m.push('• '+x)})}
     m.push('','*Total estimado:* '+fmt(d.total),'','¿Tienen disponibilidad?');
     window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(m.join('\n')),'_blank','noopener');
+  });
+
+  // "Quiero que me llamen": pide datos de contacto y guarda todo en Google Sheets
+  var dlg=$('cot-dialog'), cf=$('cot-contacto');
+  function cerrar(){dlg.close()}
+  $('cot-llamar').addEventListener('click',function(){
+    if(!validar(datos())) return;
+    $('cot-paso-datos').hidden=false; $('cot-paso-ok').hidden=true; $('cc-error').textContent='';
+    dlg.showModal(); $('cc-nombre').focus();
+  });
+  $('cot-cerrar').addEventListener('click',cerrar); $('cot-ok').addEventListener('click',cerrar);
+  dlg.addEventListener('click',function(e){if(e.target===dlg) cerrar()});
+  cf.addEventListener('submit',function(e){
+    e.preventDefault();
+    var nombre=$('cc-nombre').value.trim(), correo=$('cc-correo').value.trim(), tel=$('cc-tel').value.trim(), err=$('cc-error');
+    if(!nombre){err.textContent='Escribe tu nombre.';$('cc-nombre').focus();return}
+    if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(correo)){err.textContent='Revisa tu correo.';$('cc-correo').focus();return}
+    if(tel.replace(/\D/g,'').length<7){err.textContent='Revisa tu teléfono.';$('cc-tel').focus();return}
+    if(!SHEETS_URL){err.textContent='El formulario aún no está conectado. Escríbenos por WhatsApp.';return}
+    var d=datos(), btn=$('cc-enviar');
+    var body=new URLSearchParams({nombre:nombre,correo:correo,telefono:tel,plan:d.plan,precio_pp:d.pp,personas:d.pers,
+      fecha:d.fecha,ubicacion:d.ubicacion,extras:detalleExtras(d).join(' | '),total:d.total});
+    btn.disabled=true; btn.textContent='Enviando…'; err.textContent='';
+    fetch(SHEETS_URL,{method:'POST',mode:'no-cors',body:body})
+      .then(function(){$('cot-paso-datos').hidden=true;$('cot-paso-ok').hidden=false;cf.reset()})
+      .catch(function(){err.textContent='No pudimos enviar tus datos. Intenta de nuevo o escríbenos por WhatsApp.'})
+      .then(function(){btn.disabled=false;btn.textContent='Enviar mis datos'});
   });
   pintar();
 })();
