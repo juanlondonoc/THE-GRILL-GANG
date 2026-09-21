@@ -306,6 +306,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .menu-principal{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:stretch}
 @media (max-width:900px){.menu-principal{grid-template-columns:1fr}}
 .menu-principal .barra-menu{border-radius:0}
+.menu-extras{margin-bottom:6px}
 .asado{padding:26px 26px 22px;border-bottom:3px dotted rgba(233,43,34,.45)}
 .asado:last-child{border-bottom:0}
 .asado h3{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
@@ -394,8 +395,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .testimonio blockquote{margin:0 0 14px;font-size:1.02rem;font-style:italic;line-height:1.5;min-height:80px}
 .testimonio cite{font-family:var(--item);font-weight:800;font-style:normal;text-transform:uppercase;font-size:.92rem;color:var(--rosa);letter-spacing:.03em}
 .galeria{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-@media (max-width:900px){.galeria{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.galeria{grid-template-columns:1fr}}
+.galeria-puntos{display:none}
+@media (max-width:900px){
+  .galeria{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;margin:0 -20px;padding:0 20px;scroll-padding:0 20px;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .galeria::-webkit-scrollbar{display:none}
+  .galeria>*{flex:0 0 84%;scroll-snap-align:start}
+  .galeria-puntos{display:flex;justify-content:center;gap:8px;margin-top:16px}
+  .galeria-puntos button{width:10px;height:10px;border-radius:50%;border:0;padding:0;background:var(--rojo);opacity:.3;cursor:pointer;transition:opacity .2s,width .2s}
+  .galeria-puntos button[aria-current="true"]{opacity:1;width:24px;border-radius:5px}
+}
 .foto-ph{
   aspect-ratio:4/3;border:4px dashed var(--rojo);border-radius:16px;
   display:flex;align-items:center;justify-content:center;text-align:center;padding:14px;
@@ -569,6 +577,7 @@ footer .legal{font-size:.85rem;opacity:.85}
       <div class="foto-ph">Foto 5 — Evento corporativo</div>
       <div class="foto-ph">Foto 6 — Montaje en finca</div>
     </div>
+    <div class="galeria-puntos" aria-label="Fotos del montaje"></div>
   </div>
 </section>
 
@@ -625,9 +634,9 @@ footer .legal{font-size:.85rem;opacity:.85}
 
     <p class="nota-menu">¿No sabes cuál? Escríbenos y te ayudamos a elegir según tu evento y tu presupuesto.</p>
 
-    <!-- Acordeones: cerrados por defecto para no alargar la página -->
-    <details class="acordeon">
-      <summary>Para empezar</summary>
+    <div class="menu-principal menu-extras">
+    <div class="menu-caja">
+      <div class="barra-menu"><h3>Para empezar</h3></div>
       <div class="acordeon-cuerpo">
         <ul class="lista-precios">
           <li><span class="lp-nombre"><b>Canasta de patacón x3</b> — guacamole, hogao, queso, chicharrón</span><span class="lp-linea"></span><span class="lp-precio">$24.000</span></li>
@@ -638,10 +647,10 @@ footer .legal{font-size:.85rem;opacity:.85}
           <li><span class="lp-nombre"><b>Pulpo a la parrilla</b> — papas rotas, hogao, suero, aceite de cilantro (8 personas)</span><span class="lp-linea"></span><span class="lp-precio">$420.000</span></li>
         </ul>
       </div>
-    </details>
+    </div>
 
-    <details class="acordeon">
-      <summary>Adicionales</summary>
+    <div class="menu-caja">
+      <div class="barra-menu"><h3>Adicionales</h3></div>
       <div class="acordeon-cuerpo">
         <ul class="lista-precios">
           <li><span class="lp-nombre"><b>Costillas de cerdo St. Louis</b> 2.500 g — 10 porciones aprox.</span><span class="lp-linea"></span><span class="lp-precio">$380.000</span></li>
@@ -654,10 +663,10 @@ footer .legal{font-size:.85rem;opacity:.85}
           <li><span class="lp-nombre"><b>Mazorca asada</b> / <b>plátano maduro</b> / <b>arepa de choclo</b> und.</span><span class="lp-linea"></span><span class="lp-precio">$9.000</span></li>
         </ul>
       </div>
-    </details>
+    </div>
 
-    <details class="acordeon">
-      <summary>Bebidas</summary>
+    <div class="menu-caja">
+      <div class="barra-menu"><h3>Bebidas</h3></div>
       <div class="acordeon-cuerpo">
         <ul class="lista-precios">
           <li><span class="lp-nombre"><b>Gaseosas</b> — all you can drink</span><span class="lp-linea"></span><span class="lp-precio">$10.000</span></li>
@@ -665,10 +674,10 @@ footer .legal{font-size:.85rem;opacity:.85}
           <li><span class="lp-nombre"><b>Refajo dispensador</b> — 8 litros, 25 vasos aprox.</span><span class="lp-linea"></span><span class="lp-precio">$150.000</span></li>
         </ul>
       </div>
-    </details>
+    </div>
 
-    <details class="acordeon">
-      <summary>Postres</summary>
+    <div class="menu-caja">
+      <div class="barra-menu"><h3>Postres</h3></div>
       <div class="acordeon-cuerpo">
         <ul class="lista-precios">
           <li><span class="lp-nombre"><b>Cheesecake de frutos rojos</b></span><span class="lp-linea"></span><span class="lp-precio">$16.000</span></li>
@@ -676,7 +685,8 @@ footer .legal{font-size:.85rem;opacity:.85}
           <li><span class="lp-nombre"><b>Brownies de Milo</b></span><span class="lp-linea"></span><span class="lp-precio">$9.000</span></li>
         </ul>
       </div>
-    </details>
+    </div>
+    </div>
 
     <div class="acciones-menu">
       <!-- PENDIENTE: enlazar el PDF del menú completo -->
@@ -919,6 +929,15 @@ footer .legal{font-size:.85rem;opacity:.85}
     window.open('https://wa.me/'+WHATSAPP+'?text='+encodeURIComponent(m.join('\n')),'_blank','noopener');
   });
   pintar();
+})();
+</script>
+<script>
+(function(){
+  var g=document.querySelector('.galeria'), c=document.querySelector('.galeria-puntos'); if(!g||!c) return;
+  var items=[].slice.call(g.children);
+  var bs=items.map(function(it,i){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Foto '+(i+1));b.onclick=function(){g.scrollTo({left:it.offsetLeft-g.offsetLeft-20,behavior:'smooth'})};c.appendChild(b);return b});
+  function act(){var i=Math.round(g.scrollLeft/(items[0].offsetWidth+12));i=Math.max(0,Math.min(items.length-1,i));bs.forEach(function(b,j){b.setAttribute('aria-current',j===i?'true':'false')})}
+  g.addEventListener('scroll',act,{passive:true}); act();
 })();
 </script>
 </body>
